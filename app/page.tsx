@@ -106,6 +106,25 @@ export default function Home() {
       subtitle: "QUANTITATIVE FINANCE & ALGORITHMIC ENGINEERING",
       description: "Specializing in financial mathematics, options pricing models, stochastic jump-diffusion processes, and algorithmic trading frameworks.",
       align: "left" as const,
+      contentNode: (
+        <div className="p-4 sm:p-5 rounded-xl border border-amber-500/20 bg-slate-950/80 backdrop-blur-md font-mono text-sm shadow-2xl my-4 max-w-2xl">
+          <div className="flex items-center gap-2 mb-3 pb-2 border-b border-white/10 text-xs text-slate-400">
+            <span className="w-3 h-3 rounded-full bg-red-500/80 inline-block" />
+            <span className="w-3 h-3 rounded-full bg-amber-500/80 inline-block" />
+            <span className="w-3 h-3 rounded-full bg-emerald-500/80 inline-block" />
+            <span className="ml-2 text-slate-400 font-semibold">quashan-quant-terminal ~ bash</span>
+          </div>
+          <div className="space-y-1.5">
+            <div className="text-amber-400 font-bold text-base">{line1}</div>
+            <div className="text-emerald-400 font-bold text-lg">{line2}</div>
+            <div className="text-slate-200 mt-2 leading-relaxed">
+              <span className="text-sky-400 font-semibold">quashan@root:~$ </span>
+              {terminalText}
+              {(activeCursor === "terminal" || activeCursor === "none") && <span className="terminal-cursor">█</span>}
+            </div>
+          </div>
+        </div>
+      ),
       actions: [
         { label: "EXPLORE QUANT HUB ↘", variant: "primary" as const, onClick: scrollToHub },
         { label: "VERIFY BHU STUDENT PROFILE ↗", variant: "secondary" as const, onClick: () => window.open('/student/verify/475509', '_blank') },
@@ -162,248 +181,8 @@ export default function Home() {
       {/* High-performance lightweight 3D Background */}
       <ThreeBackground activeTab={activeTab} />
 
-      {/* Interactive 3D ScrollGlobe Hero Experience */}
-      <ScrollGlobe sections={portfolioGlobeSections} className="bg-transparent border-b border-white/10 mb-4" />
-      <section style={{
-        position: "relative",
-        minHeight: "100vh",
-        height: "auto",
-        width: "100vw",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        padding: "clamp(3rem, 8vh, 5rem) clamp(1.5rem, 3vw, 2.5rem) clamp(2rem, 5vh, 4rem)",
-        overflow: "hidden"
-      }}>
-        {/* Left-heavy layout */}
-        <div style={{ zIndex: 2, maxWidth: "900px", marginTop: "20px" }}>
-          <h1 style={{
-            fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)",
-            fontWeight: 400,
-            lineHeight: 1.15,
-            letterSpacing: "-0.02em",
-            color: "var(--foreground)",
-            marginBottom: "1.5rem",
-            fontFamily: "var(--font-sans)",
-            opacity: 0.95
-          }}>
-            <div style={{ minHeight: "1.25em" }}>
-              {line1}
-              {activeCursor === "line1" && <span className="typing-cursor">|</span>}
-            </div>
-            <div style={{ minHeight: "1.25em" }} className="dynamic-gradient-text">
-              {line2}
-              {activeCursor === "line2" && <span className="typing-cursor">|</span>}
-            </div>
-          </h1>
-
-          {/* Terminal Command Line */}
-          <div style={{
-            fontFamily: "var(--font-mono)",
-            fontSize: "clamp(0.85rem, 2vw, 1.1rem)",
-            marginBottom: "2.5rem",
-            display: "flex",
-            alignItems: "flex-start",
-            gap: "8px",
-            lineHeight: 1.5,
-            minHeight: "2em"
-          }}>
-            {(activeCursor === "terminal" || terminalText || activeCursor === "none") && (
-              <>
-                <span style={{ color: "#38bdf8", flexShrink: 0, fontWeight: 600 }}>quashan@root:~$</span>
-                <span style={{ color: "var(--foreground)", wordBreak: "break-word" }}>
-                  {terminalText}
-                  {(activeCursor === "terminal" || activeCursor === "none") && <span className="terminal-cursor">█</span>}
-                </span>
-              </>
-            )}
-          </div>
-
-          {/* Row of 5 buttons */}
-          <div style={{
-            display: "flex",
-            gap: "14px",
-            flexWrap: "wrap",
-            alignItems: "center"
-          }}>
-            <Link
-              href="/neural-graph"
-              className="btn-xai-green"
-            >
-              MASTER NEURAL ↗
-            </Link>
-
-
-            <button
-              onClick={() => handleTabClick("education")}
-              className={activeTab === "education" ? "btn-xai-white" : "btn-xai-outline"}
-            >
-              {activeTab === "education" && (
-                <span style={{
-                  display: "inline-block",
-                  width: "7px",
-                  height: "7px",
-                  borderRadius: "50%",
-                  background: "#a855f7",
-                  boxShadow: "0 0 6px #a855f7",
-                  marginRight: "8px"
-                }} />
-              )}
-              MY EDUCATION ↗
-            </button>
-
-            <button
-              onClick={() => handleTabClick("certificates")}
-              className={activeTab === "certificates" ? "btn-xai-white" : "btn-xai-outline"}
-            >
-              {activeTab === "certificates" && (
-                <span style={{
-                  display: "inline-block",
-                  width: "7px",
-                  height: "7px",
-                  borderRadius: "50%",
-                  background: "#ef4444",
-                  boxShadow: "0 0 6px #ef4444",
-                  marginRight: "8px"
-                }} />
-              )}
-              MY CERTIFICATES ↗
-            </button>
-
-            <button
-              onClick={() => handleTabClick("socials")}
-              className={activeTab === "socials" ? "btn-xai-white" : "btn-xai-outline"}
-            >
-              {activeTab === "socials" && (
-                <span style={{
-                  display: "inline-block",
-                  width: "7px",
-                  height: "7px",
-                  borderRadius: "50%",
-                  background: "#d946ef",
-                  boxShadow: "0 0 6px #d946ef",
-                  marginRight: "8px"
-                }} />
-              )}
-              SOCIAL CONNECT ↗
-            </button>
-
-            <button
-              onClick={() => handleTabClick("corporate")}
-              className={activeTab === "corporate" ? "btn-xai-white" : "btn-xai-outline"}
-            >
-              {activeTab === "corporate" && (
-                <span style={{
-                  display: "inline-block",
-                  width: "7px",
-                  height: "7px",
-                  borderRadius: "50%",
-                  background: "#22c55e",
-                  boxShadow: "0 0 6px #22c55e",
-                  marginRight: "8px"
-                }} />
-              )}
-              COMPANY PERFORMANCE ↗
-            </button>
-
-            <button
-              onClick={() => handleTabClick("finance")}
-              className={activeTab === "finance" ? "btn-xai-white" : "btn-xai-outline"}
-            >
-              {activeTab === "finance" && (
-                <span style={{
-                  display: "inline-block",
-                  width: "7px",
-                  height: "7px",
-                  borderRadius: "50%",
-                  background: "#06b6d4",
-                  boxShadow: "0 0 6px #06b6d4",
-                  marginRight: "8px"
-                }} />
-              )}
-              FINANCIAL ANALYTICS ↗
-            </button>
-
-            <button
-              onClick={() => handleTabClick("research")}
-              className={activeTab === "research" ? "btn-xai-white" : "btn-xai-outline"}
-            >
-              {activeTab === "research" && (
-                <span style={{
-                  display: "inline-block",
-                  width: "7px",
-                  height: "7px",
-                  borderRadius: "50%",
-                  background: "#10b981",
-                  boxShadow: "0 0 6px #10b981",
-                  marginRight: "8px"
-                }} />
-              )}
-              MY RESEARCH ↗
-            </button>
-          </div>
-        </div>
-
-        {/* Bottom Elements Row */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "1fr auto 1fr",
-          alignItems: "center",
-          width: "100%",
-          marginTop: "3rem",
-          zIndex: 2,
-          gap: "16px"
-        }}>
-          <div /> {/* Left empty space to push chevron to exact center */}
-
-          {/* Down arrow indicator */}
-          <button
-            onClick={scrollToHub}
-            style={{
-              background: "transparent",
-              border: "none",
-              color: "var(--foreground)",
-              cursor: "pointer",
-              padding: "8px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              opacity: 0.7,
-              transition: "opacity 0.3s ease, transform 0.3s ease",
-              margin: "0 auto"
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.opacity = "1";
-              e.currentTarget.style.transform = "translateY(4px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.opacity = "0.7";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="12" y1="5" x2="12" y2="19"></line>
-              <polyline points="19 12 12 19 5 12"></polyline>
-            </svg>
-          </button>
-
-          {/* NEURAL DOCUMENTATION link */}
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <Link
-              href="/neural-graph"
-              className="btn-xai-outline"
-              style={{
-                padding: "8px 20px",
-                fontSize: "0.75rem",
-                letterSpacing: "0.1em",
-                fontWeight: 600
-              }}
-            >
-              NEURAL DOCUMENTATION ↗
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Interactive 3D ScrollGlobe Experience */}
+      <ScrollGlobe sections={portfolioGlobeSections} className="bg-transparent" />
 
       {/* Main Container */}
       <div className="container" style={{ display: "flex", flexDirection: "column" }}>
