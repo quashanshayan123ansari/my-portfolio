@@ -9,6 +9,40 @@ import ThreeBackground from "../components/ThreeBackground";
 ───────────────────────────────────────────*/
 export const CERTS = [
   {
+    title: "Reading Financial Statements",
+    issuer: "Corporate Finance Institute (CFI)",
+    platform: "CFI",
+    year: "2026",
+    url: "https://credentials.corporatefinanceinstitute.com/16d16594-b17b-4226-a483-3cd3370acc88#acc.Mkz8Xjsm",
+    color: "#E8A400",
+    iconBg: "rgba(232,164,0,0.12)",
+    icon: (
+      <svg viewBox="0 0 40 40" width="28" height="28">
+        <circle cx="20" cy="20" r="20" fill="#E8A400"/>
+        <text x="50%" y="57%" textAnchor="middle" dominantBaseline="middle" fill="white" fontSize="9" fontWeight="800" fontFamily="sans-serif">CFI</text>
+      </svg>
+    ),
+    category: "Finance & Business",
+    desc: "Deconstructing income statements, balance sheets, and cash flow statements for financial analysis.",
+  },
+  {
+    title: "Introduction to 3-Statement Modeling",
+    issuer: "Corporate Finance Institute (CFI)",
+    platform: "CFI",
+    year: "2026",
+    url: "https://credentials.corporatefinanceinstitute.com/1446023c-a042-462c-a4c1-b85466ba2a69#acc.JKNzbRcp",
+    color: "#E8A400",
+    iconBg: "rgba(232,164,0,0.12)",
+    icon: (
+      <svg viewBox="0 0 40 40" width="28" height="28">
+        <circle cx="20" cy="20" r="20" fill="#E8A400"/>
+        <text x="50%" y="57%" textAnchor="middle" dominantBaseline="middle" fill="white" fontSize="9" fontWeight="800" fontFamily="sans-serif">CFI</text>
+      </svg>
+    ),
+    category: "Finance & Business",
+    desc: "Income statement, balance sheet, cash flow statement integration and financial model building.",
+  },
+  {
     title: "McKinsey Forward Program",
     issuer: "McKinsey.org",
     platform: "Credly",
@@ -58,23 +92,6 @@ export const CERTS = [
     ),
     category: "Finance & Business",
     desc: "Mean-variance optimization, efficient frontier construction and portfolio theory.",
-  },
-  {
-    title: "Introduction to 3-Statement Modeling",
-    issuer: "Corporate Finance Institute (CFI)",
-    platform: "CFI",
-    year: "2026",
-    url: "https://credentials.corporatefinanceinstitute.com/1446023c-a042-462c-a4c1-b85466ba2a69#acc.JKNzbRcp",
-    color: "#E8A400",
-    iconBg: "rgba(232,164,0,0.12)",
-    icon: (
-      <svg viewBox="0 0 40 40" width="28" height="28">
-        <circle cx="20" cy="20" r="20" fill="#E8A400"/>
-        <text x="50%" y="57%" textAnchor="middle" dominantBaseline="middle" fill="white" fontSize="9" fontWeight="800" fontFamily="sans-serif">CFI</text>
-      </svg>
-    ),
-    category: "Finance & Business",
-    desc: "Income statement, balance sheet, cash flow statement integration and financial model building.",
   },
   {
     title: "Investment Banking Job Simulation",
