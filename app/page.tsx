@@ -428,6 +428,56 @@ export default function Home() {
                       </div>
                     </div>
 
+                    {/* Education Item 2: Class 12th (Sant Atulanand Convent School) */}
+                    <div className="timeline-item">
+                      <div className="timeline-dot" />
+                      <div className="glass-panel" style={{ padding: "24px" }}>
+                        <div style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}>
+                          
+                          {/* School Icon */}
+                          <div style={{
+                            width: "54px",
+                            height: "54px",
+                            borderRadius: "14px",
+                            background: "rgba(30, 58, 138, 0.08)",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            boxShadow: "0 6px 16px rgba(30, 58, 138, 0.12)",
+                            border: "1px solid rgba(30, 58, 138, 0.15)",
+                            fontSize: "1.6rem",
+                            flexShrink: 0
+                          }}>
+                            🏫
+                          </div>
+
+                          <div style={{ flex: 1 }}>
+                            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "10px", marginBottom: "8px" }}>
+                              <h3 style={{ fontSize: "1.25rem", fontWeight: 600 }}>Senior Secondary (Class XII — CBSE)</h3>
+                              <span style={{ fontSize: "0.85rem", fontFamily: "var(--font-mono)", color: "var(--secondary)", background: "rgba(6, 182, 212, 0.08)", padding: "4px 8px", borderRadius: "6px" }}>
+                                Grade: 85.2%
+                              </span>
+                            </div>
+                            <h4 style={{ fontSize: "1rem", color: "var(--primary)", fontWeight: 500, marginBottom: "12px" }}>
+                              Sant Atulanand Convent School, Varanasi
+                            </h4>
+                            <p style={{ color: "var(--slate-400)", fontSize: "0.9rem", lineHeight: 1.5, marginBottom: "14px" }}>
+                              Completed Class XII Senior Secondary Education under CBSE with major concentration in Science & Mathematics. Subjects: English, Mathematics, Physics, Chemistry, Physical Education. Achieved an overall aggregate score of 85.2%.
+                            </p>
+                            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
+                              <div style={{ fontSize: "0.85rem", color: "var(--foreground)", fontFamily: "var(--font-mono)" }}>
+                                <strong>Subjects:</strong> English, Mathematics, Physics, Chemistry, Physical Education
+                              </div>
+                              <a href="/student/verify/12th" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "4px", color: "var(--primary)", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none" }}>
+                                Verify Academic Record ↗
+                              </a>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               )}
