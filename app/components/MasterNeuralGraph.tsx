@@ -57,7 +57,7 @@ export default function MasterNeuralGraph() {
         color: "#0ea5e9", // Sky Blue
         glowColor: "rgba(14, 165, 233, 0.2)",
         description: "BS in Mathematics — Banaras Hindu University. Coursework covering Calculus, Real Analysis, Complex Analysis, Algebra, Differential Equations, and Graph Theory. Research internship at MMV on Complex Conformal Mapping.",
-        url: "https://verify.bhu.ac.in/student/verify/eECba2CD-F10A-dF9F-7Aa0-C9a83f6b2CDc",
+        url: "/student/verify/475509",
       },
       {
         id: "inst_cfi",
