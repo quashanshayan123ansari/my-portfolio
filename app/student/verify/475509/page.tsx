@@ -328,14 +328,6 @@ export default function StudentVerifyPage() {
               <div>
                 <strong>Course Code:</strong> UGG181R · <strong>Status:</strong> Active Enrolled
               </div>
-              <a 
-                href="https://bhu.samarth.edu.in" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                style={{ color: "#b45309", fontWeight: 600, textDecoration: "none" }}
-              >
-                BHU Samarth Portal ↗
-              </a>
             </div>
 
           </div>
