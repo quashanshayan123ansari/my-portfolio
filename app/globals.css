@@ -968,4 +968,35 @@ div[class*="glow-"] {
   }
 }
 
+/* Globe & ScrollGlobe Animations */
+@keyframes earthRotate {
+  0% { background-position: 0 0; }
+  100% { background-position: 400px 0; }
+}
+
+@keyframes twinkling { 0%,100% { opacity:0.1; } 50% { opacity:1; } }
+@keyframes twinkling-slow { 0%,100% { opacity:0.1; } 50% { opacity:1; } }
+@keyframes twinkling-long { 0%,100% { opacity:0.1; } 50% { opacity:1; } }
+@keyframes twinkling-fast { 0%,100% { opacity:0.1; } 50% { opacity:1; } }
+
+@keyframes fadeOutLabel {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0.5rem) scale(0.95);
+  }
+}
+
+.animate-fadeOut {
+  animation: fadeOutLabel 2s forwards ease-out;
+}
+
+
 

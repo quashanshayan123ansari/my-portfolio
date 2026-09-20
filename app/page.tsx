@@ -6,6 +6,7 @@ import ThreeBackground from "./components/ThreeBackground";
 import NeuralNetworkChord from "./components/NeuralNetworkChord";
 import FinanceDashboard from "./components/FinanceDashboard";
 import { CERTS } from "./certificates/page";
+import { ScrollGlobe } from "@/components/ui/landing-page";
 
 type TabType = "education" | "certificates" | "socials" | "neural" | "finance" | "research" | "corporate";
 
@@ -97,13 +98,72 @@ export default function Home() {
 
 
 
+  const portfolioGlobeSections = [
+    {
+      id: "hero-globe",
+      badge: "Financial Mathematics & Quant",
+      title: "Mohammad Quashan Ansari",
+      subtitle: "QUANTITATIVE FINANCE & ALGORITHMIC ENGINEERING",
+      description: "Specializing in financial mathematics, options pricing models, stochastic jump-diffusion processes, and algorithmic trading frameworks.",
+      align: "left" as const,
+      actions: [
+        { label: "EXPLORE QUANT HUB ↘", variant: "primary" as const, onClick: scrollToHub },
+        { label: "VERIFY BHU STUDENT PROFILE ↗", variant: "secondary" as const, onClick: () => window.open('/student/verify/475509', '_blank') },
+      ]
+    },
+    {
+      id: "education-globe",
+      badge: "Verified Academic Record",
+      title: "Banaras Hindu University",
+      subtitle: "BS MATHEMATICS (2024–2028) | ENROLMENT #475509",
+      description: "Rigorous theoretical mathematics, real analysis, abstract algebra, linear algebra, stochastic calculus, LaTeX, and numerical methods at India's top academic institution.",
+      align: "center" as const,
+      features: [
+        { title: "Banaras Hindu University (BHU)", description: "BS Mathematics (2024–2028), Enrolment #475509. Core Mathematics major, analytical proofs, real analysis & ODEs." },
+        { title: "Sant Atulanand Convent School", description: "CBSE Class 12th (2023) — 85.2% Aggregate in Mathematics, Physics & Chemistry." }
+      ],
+      actions: [
+        { label: "Verify BHU Profile ↗", variant: "primary" as const, onClick: () => window.open('/student/verify/475509', '_blank') },
+        { label: "Verify 12th Marks ↗", variant: "secondary" as const, onClick: () => window.open('/student/verify/12th', '_blank') }
+      ]
+    },
+    {
+      id: "research-globe",
+      badge: "Quantitative Research",
+      title: "Beyond Markowitz Optimization",
+      subtitle: "EQUAL RISK CONTRIBUTION & MAXIMUM DIVERSIFICATION UNDER FAT-TAILED REGIMES",
+      description: "Author of peer quantitative finance papers evaluating Modern Portfolio Theory vs Risk Parity strategies under extreme volatility shifts.",
+      align: "left" as const,
+      features: [
+        { title: "Risk Parity Engineering", description: "Non-convex Equal Risk Contribution optimization across volatile multi-asset portfolios." },
+        { title: "Stochastic Volatility Sims", description: "Monte Carlo simulation of Heston and GARCH(1,1) volatility dynamics." },
+        { title: "Algorithmic Execution", description: "Backtesting quantitative alpha signals on tick-level asset data." }
+      ],
+      actions: [
+        { label: "Read Research Paper ↘", variant: "primary" as const, onClick: () => handleTabClick("research") },
+        { label: "Open Finance Dashboard ↘", variant: "secondary" as const, onClick: () => handleTabClick("finance") }
+      ]
+    },
+    {
+      id: "credentials-globe",
+      badge: "Global Industry Accreditations",
+      title: "Corporate Finance & Wall Street",
+      subtitle: "CFI, YALE, MCKINSEY, GOLDMAN SACHS, DELOITTE, J.P. MORGAN",
+      description: "Certified by Corporate Finance Institute (Reading Financial Statements & 3-Statement Modeling), Yale Financial Markets (Shiller), McKinsey Forward, and Wall Street virtual experiences.",
+      align: "center" as const,
+      actions: [
+        { label: "View All 15+ Credentials ↗", variant: "primary" as const, onClick: () => window.open('/certificates', '_self') }
+      ]
+    }
+  ];
+
   return (
     <div className={`page-root glow-${activeTab}`}>
       {/* High-performance lightweight 3D Background */}
       <ThreeBackground activeTab={activeTab} />
 
-
-      {/* Hero Section */}
+      {/* Interactive 3D ScrollGlobe Hero Experience */}
+      <ScrollGlobe sections={portfolioGlobeSections} className="bg-transparent border-b border-white/10 mb-4" />
       <section style={{
         position: "relative",
         minHeight: "100vh",
