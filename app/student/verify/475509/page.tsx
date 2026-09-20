@@ -269,7 +269,7 @@ export default function StudentVerifyPage() {
                     VALID TO
                   </div>
                   <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1c1917", marginTop: "4px", fontFamily: "monospace" }}>
-                    2032-JANUARY
+                    2028-JULY
                   </div>
                 </div>
               </div>
@@ -327,6 +327,12 @@ export default function StudentVerifyPage() {
             }}>
               <div>
                 <strong>Course Code:</strong> UGG181R · <strong>Status:</strong> Active Enrolled
+              </div>
+              <div>
+                <strong>Student Email:</strong>{" "}
+                <a href="mailto:mohammadansari.sci.2024@bhu.ac.in" style={{ color: "#7a1c1c", fontWeight: 600, textDecoration: "none" }}>
+                  mohammadansari.sci.2024@bhu.ac.in
+                </a>
               </div>
             </div>
 
