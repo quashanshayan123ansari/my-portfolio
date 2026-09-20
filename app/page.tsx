@@ -455,7 +455,7 @@ export default function Home() {
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "10px", marginBottom: "8px" }}>
                               <h3 style={{ fontSize: "1.25rem", fontWeight: 600 }}>Senior Secondary (Class XII — CBSE)</h3>
                               <span style={{ fontSize: "0.85rem", fontFamily: "var(--font-mono)", color: "var(--secondary)", background: "rgba(6, 182, 212, 0.08)", padding: "4px 8px", borderRadius: "6px" }}>
-                                Grade: 85.2%
+                                2023 · Grade: 85.2%
                               </span>
                             </div>
                             <h4 style={{ fontSize: "1rem", color: "var(--primary)", fontWeight: 500, marginBottom: "12px" }}>

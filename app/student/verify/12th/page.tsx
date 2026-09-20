@@ -256,7 +256,7 @@ export default function Class12VerifyPage() {
               border: "1px solid #e2e8f0"
             }}>
               <div>
-                <strong>Institution:</strong> Sant Atulanand Convent School, Varanasi
+                <strong>Institution:</strong> Sant Atulanand Convent School, Varanasi · <strong>Passing Year:</strong> 2023
               </div>
               <a 
                 href="https://www.santatulanand.ac.in/" 
