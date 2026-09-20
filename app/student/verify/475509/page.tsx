@@ -9,7 +9,7 @@ export default function StudentVerifyPage() {
       backgroundColor: "#f7f5ec",
       color: "#222",
       fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
-      padding: "20px 16px 60px 16px",
+      padding: "20px 16px 120px 16px",
       display: "flex",
       flexDirection: "column",
       alignItems: "center"
@@ -45,8 +45,8 @@ export default function StudentVerifyPage() {
         borderRadius: "24px",
         boxShadow: "0 12px 40px rgba(0, 0, 0, 0.08)",
         border: "1px solid #e8e2cf",
-        padding: "clamp(20px, 4vw, 40px)",
-        overflow: "hidden"
+        padding: "clamp(20px, 4vw, 36px)",
+        marginBottom: "40px"
       }}>
         
         {/* BHU Official Header Banner */}
@@ -109,24 +109,25 @@ export default function StudentVerifyPage() {
           <div style={{
             background: "linear-gradient(145deg, #7a1c1c 0%, #4a0e0e 100%)",
             borderRadius: "20px",
-            padding: "32px 24px",
+            padding: "24px 20px",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            justifyContent: "space-between",
             textAlign: "center",
             color: "#ffffff",
             boxShadow: "0 10px 25px rgba(122, 28, 28, 0.25)"
           }}>
             {/* Student Photo */}
             <div style={{
-              width: "160px",
-              height: "190px",
-              borderRadius: "16px",
+              width: "140px",
+              height: "165px",
+              borderRadius: "14px",
               overflow: "hidden",
               border: "3px solid #eab308",
               boxShadow: "0 8px 20px rgba(0,0,0,0.3)",
               backgroundColor: "#ffffff",
-              marginBottom: "20px"
+              marginBottom: "14px"
             }}>
               <img 
                 src="/quashan-student.jpg" 
@@ -136,11 +137,13 @@ export default function StudentVerifyPage() {
             </div>
 
             {/* Student Name & Program */}
-            <h2 style={{ fontSize: "1.45rem", fontWeight: 700, margin: "0 0 6px 0", color: "#ffffff" }}>
-              Mohammad Quashan Ansari
-            </h2>
-            <div style={{ fontSize: "0.9rem", color: "#fcd34d", fontWeight: 500, lineHeight: 1.4, marginBottom: "24px" }}>
-              Bachelor of Science (Honours) in Mathematics
+            <div>
+              <h2 style={{ fontSize: "1.35rem", fontWeight: 700, margin: "0 0 4px 0", color: "#ffffff" }}>
+                Mohammad Quashan Ansari
+              </h2>
+              <div style={{ fontSize: "0.85rem", color: "#fcd34d", fontWeight: 500, lineHeight: 1.4, marginBottom: "16px" }}>
+                Bachelor of Science (Honours) in Mathematics
+              </div>
             </div>
 
             {/* Enrolment Box */}
@@ -148,13 +151,14 @@ export default function StudentVerifyPage() {
               width: "100%",
               backgroundColor: "rgba(0, 0, 0, 0.35)",
               borderRadius: "12px",
-              padding: "12px 16px",
-              border: "1px solid rgba(255, 255, 255, 0.15)"
+              padding: "10px 14px",
+              border: "1px solid rgba(255, 255, 255, 0.15)",
+              marginTop: "auto"
             }}>
-              <div style={{ fontSize: "0.75rem", color: "#d1d5db", letterSpacing: "0.1em", fontWeight: 700, textTransform: "uppercase", marginBottom: "4px" }}>
+              <div style={{ fontSize: "0.7rem", color: "#d1d5db", letterSpacing: "0.1em", fontWeight: 700, textTransform: "uppercase", marginBottom: "2px" }}>
                 ENROLMENT NUMBER
               </div>
-              <div style={{ fontSize: "1.35rem", fontWeight: 800, color: "#ffffff", fontFamily: "monospace", letterSpacing: "0.08em" }}>
+              <div style={{ fontSize: "1.3rem", fontWeight: 800, color: "#ffffff", fontFamily: "monospace", letterSpacing: "0.08em" }}>
                 475509
               </div>
             </div>
