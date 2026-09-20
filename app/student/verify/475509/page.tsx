@@ -242,7 +242,7 @@ export default function StudentVerifyPage() {
                     VALID FROM
                   </div>
                   <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1c1917", marginTop: "4px", fontFamily: "monospace" }}>
-                    2023-JULY
+                    2024-JULY
                   </div>
                 </div>
               </div>
@@ -269,7 +269,7 @@ export default function StudentVerifyPage() {
                     VALID TO
                   </div>
                   <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1c1917", marginTop: "4px", fontFamily: "monospace" }}>
-                    2027-JULY
+                    2032-JANUARY
                   </div>
                 </div>
               </div>
