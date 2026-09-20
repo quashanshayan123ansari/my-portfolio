@@ -98,7 +98,7 @@ export default function Home() {
 
 
   return (
-    <div className={`glow-${activeTab}`}>
+    <div className={`page-root glow-${activeTab}`}>
       {/* High-performance lightweight 3D Background */}
       <ThreeBackground activeTab={activeTab} />
 

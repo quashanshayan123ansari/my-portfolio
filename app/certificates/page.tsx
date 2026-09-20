@@ -236,9 +236,9 @@ export default function Page() {
     : CERTS.filter(c => c.category === activeCategory);
 
   return (
-    <>
+    <div className="page-root glow-certificates">
       <ThreeBackground activeTab="certificates" />
-      <div className="container glow-certificates" style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+      <div className="container" style={{ display: "flex", flexDirection: "column", minHeight: "100%" }}>
 
         <header style={{ padding: "2rem clamp(2rem, 8vw, 8rem)", zIndex: 10 }}>
           <Link href="/" className="btn-xai-outline" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
@@ -509,6 +509,6 @@ export default function Page() {
           </p>
         </footer>
       </div>
-    </>
+    </div>
   );
 }

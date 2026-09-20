@@ -19,6 +19,13 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html {
+  /* Lock the browser window itself — all scrolling happens inside .page-root */
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
   scroll-behavior: smooth;
 }
 
@@ -26,28 +33,44 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-sans);
-  min-height: 100vh;
-  overflow-x: hidden;
+  /* height: 100% so children can fill the viewport correctly */
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Premium Scrollbar */
-::-webkit-scrollbar {
+/* ── THE ONE TRUE SCROLL CONTAINER ──────────────────────────────
+   All pages wrap their content in this class.
+   - height 100vh → viewport-tall, no empty space below footer
+   - overflow-y auto → scrolls only when content is taller than 100vh
+   - overscroll-behavior none → no bounce/rubber-band at top or bottom
+   - Custom scrollbar styles below also target this element
+─────────────────────────────────────────────────────────────── */
+.page-root {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  position: relative;
+}
+
+/* Premium Scrollbar — scoped to .page-root (our scroll container) */
+.page-root::-webkit-scrollbar {
   width: 8px;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
+.page-root::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
+.page-root::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  border: 2px solid #f1f5f9;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.page-root::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
 
@@ -511,6 +534,31 @@ footer {
   }
 }
 
+/* ─────────────────────────────────────────
+   SCROLL CONTAINMENT — prevents "getting lost"
+   when scrolling inside tab content panels.
+   overscroll-behavior: contain means scroll
+   stops at the boundary and does NOT propagate
+   up to the page or out to the browser chrome.
+───────────────────────────────────────────── */
+
+/* Any panel that scrolls internally stays contained */
+.glass-panel,
+.cards-grid,
+.timeline,
+.socials-grid {
+  overscroll-behavior: contain;
+}
+
+/* Ensure tab content areas don't let stray scroll
+   events tunnel through to the page root */
+.container main,
+.container > main {
+  overscroll-behavior-y: contain;
+}
+
+
+
 /* -------------------------------------------------------------
    HIGH-PERFORMANCE BREATHING GLOW STYLES
    ------------------------------------------------------------- */
@@ -755,6 +803,49 @@ div[class*="glow-"] {
   --glass-bg: rgba(255, 255, 255, 0.75);
   --glass-border: rgba(34, 197, 94, 0.12);
 }
+
+/* ── RESEARCH TAB ── */
+.glow-research {
+  --glow-color-1: rgba(16, 185, 129, 0.2);
+  --glow-color-2: rgba(6, 182, 212, 0.1);
+  --glow-core-1: rgba(16, 185, 129, 0.3);
+  --glow-core-2: rgba(209, 250, 229, 0.2);
+  --glow-core-3: rgba(6, 182, 212, 0.1);
+  --primary: #0d9488;
+  --secondary: #0891b2;
+  --primary-glow: rgba(16, 185, 129, 0.06);
+  --secondary-glow: rgba(6, 182, 212, 0.06);
+  --background: #f0fdfa; /* Extremely light teal */
+  --foreground: #042f2e; /* Clean dark teal */
+  --slate-400: #0d9488;
+  --slate-800: #0f766e;
+  --slate-900: #042f2e;
+  --border-color: rgba(13, 148, 136, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(13, 148, 136, 0.12);
+}
+
+/* ── NEURAL TAB ── */
+.glow-neural {
+  --glow-color-1: rgba(99, 102, 241, 0.2);
+  --glow-color-2: rgba(139, 92, 246, 0.1);
+  --glow-core-1: rgba(99, 102, 241, 0.3);
+  --glow-core-2: rgba(237, 233, 254, 0.2);
+  --glow-core-3: rgba(139, 92, 246, 0.1);
+  --primary: #6366f1;
+  --secondary: #8b5cf6;
+  --primary-glow: rgba(99, 102, 241, 0.06);
+  --secondary-glow: rgba(139, 92, 246, 0.06);
+  --background: #f5f3ff; /* Extremely light indigo */
+  --foreground: #1e1b4b; /* Deep indigo */
+  --slate-400: #6366f1;
+  --slate-800: #4338ca;
+  --slate-900: #1e1b4b;
+  --border-color: rgba(99, 102, 241, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(99, 102, 241, 0.12);
+}
+
 
 
 /* Massive Glow (now dynamically colored) */
