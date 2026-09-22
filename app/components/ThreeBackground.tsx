@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import OrbitalSphereBackground from "@/components/ui/orbital-sphere";
 
 function FloatingPaths({ position }: { position: number }) {
   const paths = Array.from({ length: 36 }, (_, i) => ({
@@ -26,7 +27,7 @@ function FloatingPaths({ position }: { position: number }) {
           width: "100%",
           height: "100%",
           color: "var(--primary)",
-          opacity: 0.4,
+          opacity: 0.3,
         }}
       >
         <title>Background Paths</title>
@@ -77,6 +78,8 @@ export default function ThreeBackground({ activeTab = "education" }: ThreeBackgr
       }}
     >
       <div style={{ position: "relative", width: "100%", height: "100%" }}>
+        {/* Three.js Orbital Sphere Background */}
+        <OrbitalSphereBackground className="absolute inset-0 w-full h-full opacity-65 pointer-events-none" />
         <FloatingPaths position={1} />
         <FloatingPaths position={-1} />
       </div>
