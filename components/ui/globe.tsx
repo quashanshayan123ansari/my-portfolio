@@ -15,9 +15,9 @@ const Globe: React.FC = () => {
           @keyframes twinkling-fast { 0%,100% { opacity:0.1; } 50% { opacity:1; } }
         `}
       </style>
-      <div className="flex items-center justify-center h-screen">
+      <div className="flex items-center justify-center pointer-events-none select-none">
         <div
-          className="relative w-[250px] h-[250px] rounded-full overflow-hidden shadow-[0_0_20px_rgba(255,255,255,0.2),-5px_0_8px_#c3f4ff_inset,15px_2px_25px_#000_inset,-24px_-2px_34px_#c3f4ff99_inset,250px_0_44px_#00000066_inset,150px_0_38px_#000000aa_inset]"
+          className="relative w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] lg:w-[380px] lg:h-[380px] rounded-full overflow-hidden shadow-[0_0_50px_rgba(245,158,11,0.25),-5px_0_8px_#c3f4ff_inset,15px_2px_25px_#000_inset,-24px_-2px_34px_#c3f4ff99_inset,250px_0_44px_#00000066_inset,150px_0_38px_#000000aa_inset]"
           style={{
             backgroundImage: "url('https://cdn.21st.dev/assets/mirror/f2/f2fe23d0c6a8406962e4c5ef969e13dc9de3faf37d3e7258a1067173325b254f.jpg')",
             backgroundSize: "cover",
@@ -26,34 +26,13 @@ const Globe: React.FC = () => {
           }}
         >
           {/* Stars */}
-          <div
-            className="absolute left-[-20px] w-1 h-1 bg-white rounded-full"
-            style={{ animation: "twinkling 3s infinite" }}
-          />
-          <div
-            className="absolute left-[-40px] top-[30px] w-1 h-1 bg-white rounded-full"
-            style={{ animation: "twinkling-slow 2s infinite" }}
-          />
-          <div
-            className="absolute left-[350px] top-[90px] w-1 h-1 bg-white rounded-full"
-            style={{ animation: "twinkling-long 4s infinite" }}
-          />
-          <div
-            className="absolute left-[200px] top-[290px] w-1 h-1 bg-white rounded-full"
-            style={{ animation: "twinkling 3s infinite" }}
-          />
-          <div
-            className="absolute left-[50px] top-[270px] w-1 h-1 bg-white rounded-full"
-            style={{ animation: "twinkling-fast 1.5s infinite" }}
-          />
-          <div
-            className="absolute left-[250px] top-[-50px] w-1 h-1 bg-white rounded-full"
-            style={{ animation: "twinkling-long 4s infinite" }}
-          />
-          <div
-            className="absolute left-[290px] top-[60px] w-1 h-1 bg-white rounded-full"
-            style={{ animation: "twinkling-slow 2s infinite" }}
-          />
+          <div className="absolute left-[-20px] w-1 h-1 bg-white rounded-full" style={{ animation: "twinkling 3s infinite" }} />
+          <div className="absolute left-[-40px] top-[30px] w-1 h-1 bg-white rounded-full" style={{ animation: "twinkling-slow 2s infinite" }} />
+          <div className="absolute left-[350px] top-[90px] w-1 h-1 bg-white rounded-full" style={{ animation: "twinkling-long 4s infinite" }} />
+          <div className="absolute left-[200px] top-[290px] w-1 h-1 bg-white rounded-full" style={{ animation: "twinkling 3s infinite" }} />
+          <div className="absolute left-[50px] top-[270px] w-1 h-1 bg-white rounded-full" style={{ animation: "twinkling-fast 1.5s infinite" }} />
+          <div className="absolute left-[250px] top-[-50px] w-1 h-1 bg-white rounded-full" style={{ animation: "twinkling-long 4s infinite" }} />
+          <div className="absolute left-[290px] top-[60px] w-1 h-1 bg-white rounded-full" style={{ animation: "twinkling-slow 2s infinite" }} />
         </div>
       </div>
     </>
