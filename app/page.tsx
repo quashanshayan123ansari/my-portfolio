@@ -153,7 +153,7 @@ export default function Home() {
                 <span style={{ color: "#38bdf8", flexShrink: 0, fontWeight: 600 }}>quashan@root:~$</span>
                 <span style={{ color: "var(--foreground)", wordBreak: "break-word" }}>
                   {terminalText}
-                  {(activeCursor === "terminal" || activeCursor === "none") && <span className="terminal-cursor">█</span>}
+                  {(activeCursor === "terminal" || activeCursor === "none") && <span className="terminal-cursor">â–ˆ</span>}
                 </span>
               </>
             )}
@@ -170,7 +170,7 @@ export default function Home() {
               href="/neural-graph"
               className="btn-xai-green"
             >
-              MASTER NEURAL ↗
+              MASTER NEURAL â†—
             </Link>
 
 
@@ -189,7 +189,7 @@ export default function Home() {
                   marginRight: "8px"
                 }} />
               )}
-              MY EDUCATION ↗
+              MY EDUCATION â†—
             </button>
 
             <button
@@ -207,7 +207,7 @@ export default function Home() {
                   marginRight: "8px"
                 }} />
               )}
-              MY CERTIFICATES ↗
+              MY CERTIFICATES â†—
             </button>
 
             <button
@@ -225,7 +225,7 @@ export default function Home() {
                   marginRight: "8px"
                 }} />
               )}
-              SOCIAL CONNECT ↗
+              SOCIAL CONNECT â†—
             </button>
 
             <button
@@ -243,7 +243,7 @@ export default function Home() {
                   marginRight: "8px"
                 }} />
               )}
-              COMPANY PERFORMANCE ↗
+              COMPANY PERFORMANCE â†—
             </button>
 
             <button
@@ -261,7 +261,7 @@ export default function Home() {
                   marginRight: "8px"
                 }} />
               )}
-              FINANCIAL ANALYTICS ↗
+              FINANCIAL ANALYTICS â†—
             </button>
 
             <button
@@ -279,7 +279,7 @@ export default function Home() {
                   marginRight: "8px"
                 }} />
               )}
-              MY RESEARCH ↗
+              MY RESEARCH â†—
             </button>
           </div>
         </div>
@@ -339,7 +339,7 @@ export default function Home() {
                 fontWeight: 600
               }}
             >
-              NEURAL DOCUMENTATION ↗
+              NEURAL DOCUMENTATION â†—
             </Link>
           </div>
         </div>
@@ -405,7 +405,7 @@ export default function Home() {
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "10px", marginBottom: "8px" }}>
                               <h3 style={{ fontSize: "1.25rem", fontWeight: 600 }}>Bachelor of Science (BS) in Mathematics</h3>
                               <span style={{ fontSize: "0.85rem", fontFamily: "var(--font-mono)", color: "var(--secondary)", background: "rgba(6, 182, 212, 0.08)", padding: "4px 8px", borderRadius: "6px" }}>
-                                2024 — Present
+                                2024 â€” Present
                               </span>
                             </div>
                             <h4 style={{ fontSize: "1rem", color: "var(--primary)", fontWeight: 500, marginBottom: "12px" }}>
@@ -419,7 +419,7 @@ export default function Home() {
                                 <strong>Academic Track:</strong> Core Mathematics Major
                               </div>
                               <a href="/student/verify/475509" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "4px", color: "var(--primary)", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none" }}>
-                                Verify Student Profile ↗
+                                Verify Student Profile â†—
                               </a>
                             </div>
                           </div>
@@ -448,14 +448,14 @@ export default function Home() {
                             fontSize: "1.6rem",
                             flexShrink: 0
                           }}>
-                            🏫
+                            ðŸ«
                           </div>
 
                           <div style={{ flex: 1 }}>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "10px", marginBottom: "8px" }}>
-                              <h3 style={{ fontSize: "1.25rem", fontWeight: 600 }}>Senior Secondary (Class XII — CBSE)</h3>
+                              <h3 style={{ fontSize: "1.25rem", fontWeight: 600 }}>Senior Secondary (Class XII â€” CBSE)</h3>
                               <span style={{ fontSize: "0.85rem", fontFamily: "var(--font-mono)", color: "var(--secondary)", background: "rgba(6, 182, 212, 0.08)", padding: "4px 8px", borderRadius: "6px" }}>
-                                2023 · Grade: 85.2%
+                                2023 Â· Grade: 85.2%
                               </span>
                             </div>
                             <h4 style={{ fontSize: "1rem", color: "var(--primary)", fontWeight: 500, marginBottom: "12px" }}>
@@ -469,7 +469,7 @@ export default function Home() {
                                 <strong>Subjects:</strong> English, Mathematics, Physics, Chemistry, Physical Education
                               </div>
                               <a href="/student/verify/12th" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "4px", color: "var(--primary)", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none" }}>
-                                Verify Academic Record ↗
+                                Verify Academic Record â†—
                               </a>
                             </div>
                           </div>
@@ -531,7 +531,7 @@ export default function Home() {
                             {cert.title}
                           </h3>
                           <p style={{ color: "var(--slate-400)", fontSize: "0.76rem", margin: "0 0 4px" }}>
-                            {cert.issuer} · {cert.year}
+                            {cert.issuer} Â· {cert.year}
                           </p>
                           {cert.desc && (
                             <p style={{ color: "var(--slate-400)", fontSize: "0.72rem", margin: "0 0 10px", lineHeight: 1.5, opacity: 0.8 }}>
@@ -565,7 +565,614 @@ export default function Home() {
                                 textDecoration: "none",
                               }}
                             >
-                              View Certificate ↗
+                              View Certificate â†—
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* TAB: SOCIALS - WITH DIRECT ACADEMIC AND PERSONAL EMAILS */}
+              {activeTab === "socials" && (
+                <div style={{ animation: "fadeInUp 0.5s ease forwards" }}>
+                  
+                  <div style={{ textAlign: "center", maxWidth: "600px", margin: "0 auto 1.5rem auto" }}>
+                    <p style={{ color: "var(--slate-400)", fontSize: "0.95rem", lineHeight: 1.6 }}>
+                      Let's sync up! I am actively engaged across multiple engineering and computational platforms. Explore my technical profiles below:
+                    </p>
+                  </div>
+
+                  <div className="socials-grid" style={{ marginBottom: "3rem" }}>
+                    
+                    {/* GitHub (Sleek Charcoal) */}
+                    <a href="https://github.com/quashanshayan123ansari" target="_blank" rel="noopener noreferrer" className="glass-panel social-btn social-github">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="#181717" />
+                      </svg>
+                      <div>
+                        <div style={{ fontWeight: 600 }}>GitHub</div>
+                        <div style={{ fontSize: "0.75rem", opacity: 0.8, fontFamily: "var(--font-mono)" }}>@quashanshayan123ansari</div>
+                      </div>
+                    </a>
+
+                    {/* LinkedIn (Rich Brand Blue) */}
+                    <a href="https://www.linkedin.com/in/mqansari123" target="_blank" rel="noopener noreferrer" className="glass-panel social-btn social-linkedin">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z" fill="#0A66C2" />
+                      </svg>
+                      <div>
+                        <div style={{ fontWeight: 600 }}>LinkedIn</div>
+                        <div style={{ fontSize: "0.75rem", opacity: 0.8, fontFamily: "var(--font-mono)" }}>@mqansari123</div>
+                      </div>
+                    </a> useEffect } from "react";
+import Link from "next/link";
+import ThreeBackground from "./components/ThreeBackground";
+import NeuralNetworkChord from "./components/NeuralNetworkChord";
+import FinanceDashboard from "./components/FinanceDashboard";
+import { CERTS } from "./certificates/page";
+
+type TabType = "education" | "certificates" | "socials" | "neural" | "finance" | "research" | "corporate";
+
+export default function Home() {
+  const [activeTab, setActiveTab] = useState<TabType>("education");
+  const [line1, setLine1] = useState("");
+  const [line2, setLine2] = useState("");
+  const [terminalText, setTerminalText] = useState("");
+  const [activeCursor, setActiveCursor] = useState<"line1" | "line2" | "terminal" | "none">("line1");
+
+
+
+
+  useEffect(() => {
+    const text1 = "Hello everyone!";
+    const text2 = "I am Quashan";
+    const text3 = "specializing in financial mathematics and quantitative finance, developing options pricing models, simulating stochastic processes, and engineering algorithmic trading frameworks.";
+    
+    let i1 = 0;
+    let i2 = 0;
+    let i3 = 0;
+    
+    let timer1: ReturnType<typeof setInterval> | undefined;
+    let timer2: ReturnType<typeof setInterval> | undefined;
+    let timer3: ReturnType<typeof setInterval> | undefined;
+    let timeout1: ReturnType<typeof setTimeout> | undefined;
+    let timeout2: ReturnType<typeof setTimeout> | undefined;
+    
+    // Type line 1
+    timer1 = setInterval(() => {
+      if (i1 < text1.length) {
+        setLine1(text1.substring(0, i1 + 1));
+        i1++;
+      } else {
+        clearInterval(timer1);
+        setActiveCursor("line2");
+        
+        // Type line 2 (starts after a small delay of 100ms)
+        timeout1 = setTimeout(() => {
+          timer2 = setInterval(() => {
+            if (i2 < text2.length) {
+              setLine2(text2.substring(0, i2 + 1));
+              i2++;
+            } else {
+              clearInterval(timer2);
+              setActiveCursor("terminal");
+              
+              // Type terminal text (starts after a delay of 150ms)
+              timeout2 = setTimeout(() => {
+                timer3 = setInterval(() => {
+                  if (i3 < text3.length) {
+                    setTerminalText(text3.substring(0, i3 + 1));
+                    i3++;
+                  } else {
+                    clearInterval(timer3);
+                    setActiveCursor("none");
+                  }
+                }, 15); // terminal types slightly faster
+              }, 150);
+            }
+          }, 30);
+        }, 100);
+      }
+    }, 30);
+    
+    return () => {
+      if (timer1) clearInterval(timer1);
+      if (timer2) clearInterval(timer2);
+      if (timer3) clearInterval(timer3);
+      if (timeout1) clearTimeout(timeout1);
+      if (timeout2) clearTimeout(timeout2);
+    };
+  }, []);
+
+  const handleTabClick = (tab: TabType) => {
+    setActiveTab(tab);
+    const hubSection = document.getElementById("hub");
+    if (hubSection) {
+      hubSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToHub = () => {
+    const hubSection = document.getElementById("hub");
+    if (hubSection) {
+      hubSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+
+
+  return (
+    <div className={`page-root glow-${activeTab}`}>
+      {/* High-performance lightweight 3D Background */}
+      <ThreeBackground activeTab={activeTab} />
+
+
+      {/* Hero Section */}
+      <section style={{
+        position: "relative",
+        minHeight: "100vh",
+        height: "auto",
+        width: "100vw",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        padding: "clamp(3rem, 8vh, 5rem) clamp(1.5rem, 3vw, 2.5rem) clamp(2rem, 5vh, 4rem)",
+        overflow: "hidden"
+      }}>
+        {/* Left-heavy layout */}
+        <div style={{ zIndex: 2, maxWidth: "900px", marginTop: "20px" }}>
+          <h1 style={{
+            fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)",
+            fontWeight: 400,
+            lineHeight: 1.15,
+            letterSpacing: "-0.02em",
+            color: "var(--foreground)",
+            marginBottom: "1.5rem",
+            fontFamily: "var(--font-sans)",
+            opacity: 0.95
+          }}>
+            <div style={{ minHeight: "1.25em" }}>
+              {line1}
+              {activeCursor === "line1" && <span className="typing-cursor">|</span>}
+            </div>
+            <div style={{ minHeight: "1.25em" }} className="dynamic-gradient-text">
+              {line2}
+              {activeCursor === "line2" && <span className="typing-cursor">|</span>}
+            </div>
+          </h1>
+
+          {/* Terminal Command Line */}
+          <div style={{
+            fontFamily: "var(--font-mono)",
+            fontSize: "clamp(0.85rem, 2vw, 1.1rem)",
+            marginBottom: "2.5rem",
+            display: "flex",
+            alignItems: "flex-start",
+            gap: "8px",
+            lineHeight: 1.5,
+            minHeight: "2em"
+          }}>
+            {(activeCursor === "terminal" || terminalText || activeCursor === "none") && (
+              <>
+                <span style={{ color: "#38bdf8", flexShrink: 0, fontWeight: 600 }}>quashan@root:~$</span>
+                <span style={{ color: "var(--foreground)", wordBreak: "break-word" }}>
+                  {terminalText}
+                  {(activeCursor === "terminal" || activeCursor === "none") && <span className="terminal-cursor">â–ˆ</span>}
+                </span>
+              </>
+            )}
+          </div>
+
+          {/* Row of 5 buttons */}
+          <div style={{
+            display: "flex",
+            gap: "14px",
+            flexWrap: "wrap",
+            alignItems: "center"
+          }}>
+            <Link
+              href="/neural-graph"
+              className="btn-xai-green"
+            >
+              MASTER NEURAL â†—
+            </Link>
+
+
+            <button
+              onClick={() => handleTabClick("education")}
+              className={activeTab === "education" ? "btn-xai-white" : "btn-xai-outline"}
+            >
+              {activeTab === "education" && (
+                <span style={{
+                  display: "inline-block",
+                  width: "7px",
+                  height: "7px",
+                  borderRadius: "50%",
+                  background: "#a855f7",
+                  boxShadow: "0 0 6px #a855f7",
+                  marginRight: "8px"
+                }} />
+              )}
+              MY EDUCATION â†—
+            </button>
+
+            <button
+              onClick={() => handleTabClick("certificates")}
+              className={activeTab === "certificates" ? "btn-xai-white" : "btn-xai-outline"}
+            >
+              {activeTab === "certificates" && (
+                <span style={{
+                  display: "inline-block",
+                  width: "7px",
+                  height: "7px",
+                  borderRadius: "50%",
+                  background: "#ef4444",
+                  boxShadow: "0 0 6px #ef4444",
+                  marginRight: "8px"
+                }} />
+              )}
+              MY CERTIFICATES â†—
+            </button>
+
+            <button
+              onClick={() => handleTabClick("socials")}
+              className={activeTab === "socials" ? "btn-xai-white" : "btn-xai-outline"}
+            >
+              {activeTab === "socials" && (
+                <span style={{
+                  display: "inline-block",
+                  width: "7px",
+                  height: "7px",
+                  borderRadius: "50%",
+                  background: "#d946ef",
+                  boxShadow: "0 0 6px #d946ef",
+                  marginRight: "8px"
+                }} />
+              )}
+              SOCIAL CONNECT â†—
+            </button>
+
+            <button
+              onClick={() => handleTabClick("corporate")}
+              className={activeTab === "corporate" ? "btn-xai-white" : "btn-xai-outline"}
+            >
+              {activeTab === "corporate" && (
+                <span style={{
+                  display: "inline-block",
+                  width: "7px",
+                  height: "7px",
+                  borderRadius: "50%",
+                  background: "#22c55e",
+                  boxShadow: "0 0 6px #22c55e",
+                  marginRight: "8px"
+                }} />
+              )}
+              COMPANY PERFORMANCE â†—
+            </button>
+
+            <button
+              onClick={() => handleTabClick("finance")}
+              className={activeTab === "finance" ? "btn-xai-white" : "btn-xai-outline"}
+            >
+              {activeTab === "finance" && (
+                <span style={{
+                  display: "inline-block",
+                  width: "7px",
+                  height: "7px",
+                  borderRadius: "50%",
+                  background: "#06b6d4",
+                  boxShadow: "0 0 6px #06b6d4",
+                  marginRight: "8px"
+                }} />
+              )}
+              FINANCIAL ANALYTICS â†—
+            </button>
+
+            <button
+              onClick={() => handleTabClick("research")}
+              className={activeTab === "research" ? "btn-xai-white" : "btn-xai-outline"}
+            >
+              {activeTab === "research" && (
+                <span style={{
+                  display: "inline-block",
+                  width: "7px",
+                  height: "7px",
+                  borderRadius: "50%",
+                  background: "#10b981",
+                  boxShadow: "0 0 6px #10b981",
+                  marginRight: "8px"
+                }} />
+              )}
+              MY RESEARCH â†—
+            </button>
+          </div>
+        </div>
+
+        {/* Bottom Elements Row */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "1fr auto 1fr",
+          alignItems: "center",
+          width: "100%",
+          marginTop: "3rem",
+          zIndex: 2,
+          gap: "16px"
+        }}>
+          <div /> {/* Left empty space to push chevron to exact center */}
+
+          {/* Down arrow indicator */}
+          <button
+            onClick={scrollToHub}
+            style={{
+              background: "transparent",
+              border: "none",
+              color: "var(--foreground)",
+              cursor: "pointer",
+              padding: "8px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              opacity: 0.7,
+              transition: "opacity 0.3s ease, transform 0.3s ease",
+              margin: "0 auto"
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.opacity = "1";
+              e.currentTarget.style.transform = "translateY(4px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.opacity = "0.7";
+              e.currentTarget.style.transform = "translateY(0)";
+            }}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </button>
+
+          {/* NEURAL DOCUMENTATION link */}
+          <div style={{ display: "flex", justifyContent: "flex-end" }}>
+            <Link
+              href="/neural-graph"
+              className="btn-xai-outline"
+              style={{
+                padding: "8px 20px",
+                fontSize: "0.75rem",
+                letterSpacing: "0.1em",
+                fontWeight: 600
+              }}
+            >
+              NEURAL DOCUMENTATION â†—
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Container */}
+      <div className="container" style={{ display: "flex", flexDirection: "column" }}>
+        
+        {/* Hero & About Section Removed */}
+        <main style={{ flex: 1, padding: "3rem 0" }}>
+
+          {/* Interactive Hub Section */}
+          <section id="hub" className="animate-fade-in-up delay-100" style={{ scrollMarginTop: "100px" }}>
+            
+
+
+            {/* Dynamic Content Panel */}
+            <div style={{ minHeight: "400px" }}>
+              
+              {/* TAB: NEURAL MAP */}
+              {activeTab === "neural" && (
+                <div style={{ animation: "fadeInUp 0.5s ease forwards" }}>
+                  <NeuralNetworkChord />
+                </div>
+              )}
+              
+
+
+
+              {/* TAB: EDUCATION - SWAPPED ORDER WITH BEAUTIFUL CIRCULAR SVGs & DIRECT VERIFICATION LINKS */}
+              {activeTab === "education" && (
+                <div style={{ animation: "fadeInUp 0.5s ease forwards" }}>
+                  <div className="timeline" style={{ padding: "10px 0 10px 32px" }}>
+                    
+                    {/* Education Item 1: BHU (Banaras Hindu University) */}
+                    <div className="timeline-item">
+                      <div className="timeline-dot" />
+                      <div className="glass-panel" style={{ padding: "24px" }}>
+                        <div style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}>
+                          
+                          {/* Beautiful Circular BHU Vector SVG Image */}
+                          <div style={{
+                            width: "54px",
+                            height: "54px",
+                            borderRadius: "14px",
+                            background: "rgba(255, 255, 255, 0.95)",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            boxShadow: "0 6px 16px rgba(255, 128, 0, 0.12)",
+                            border: "1px solid rgba(0, 0, 0, 0.08)",
+                            padding: "2px",
+                            flexShrink: 0
+                          }}>
+                            <img 
+                              src="/bhu-logo-custom.png" 
+                              alt="BHU Logo" 
+                              style={{ width: "100%", height: "100%", objectFit: "contain" }} 
+                            />
+                          </div>
+
+                          <div style={{ flex: 1 }}>
+                            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "10px", marginBottom: "8px" }}>
+                              <h3 style={{ fontSize: "1.25rem", fontWeight: 600 }}>Bachelor of Science (BS) in Mathematics</h3>
+                              <span style={{ fontSize: "0.85rem", fontFamily: "var(--font-mono)", color: "var(--secondary)", background: "rgba(6, 182, 212, 0.08)", padding: "4px 8px", borderRadius: "6px" }}>
+                                2024 â€” Present
+                              </span>
+                            </div>
+                            <h4 style={{ fontSize: "1rem", color: "var(--primary)", fontWeight: 500, marginBottom: "12px" }}>
+                              Banaras Hindu University (BHU)
+                            </h4>
+                            <p style={{ color: "var(--slate-400)", fontSize: "0.9rem", lineHeight: 1.5, marginBottom: "14px" }}>
+                              Pursuing core theoretical mathematics, focusing heavily on algebraic structures, mathematical analysis, differential geometry, numerical analysis, data analysis, LaTeX typesetting, vector databases, and computational mathematics. Strengthening analytical problem-solving and rigorous scientific proofs.
+                            </p>
+                            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
+                              <div style={{ fontSize: "0.85rem", color: "var(--foreground)", fontFamily: "var(--font-mono)" }}>
+                                <strong>Academic Track:</strong> Core Mathematics Major
+                              </div>
+                              <a href="/student/verify/475509" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "4px", color: "var(--primary)", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none" }}>
+                                Verify Student Profile â†—
+                              </a>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Education Item 2: Class 12th (Sant Atulanand Convent School) */}
+                    <div className="timeline-item">
+                      <div className="timeline-dot" />
+                      <div className="glass-panel" style={{ padding: "24px" }}>
+                        <div style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}>
+                          
+                          {/* School Icon */}
+                          <div style={{
+                            width: "54px",
+                            height: "54px",
+                            borderRadius: "14px",
+                            background: "rgba(30, 58, 138, 0.08)",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            boxShadow: "0 6px 16px rgba(30, 58, 138, 0.12)",
+                            border: "1px solid rgba(30, 58, 138, 0.15)",
+                            fontSize: "1.6rem",
+                            flexShrink: 0
+                          }}>
+                            ðŸ«
+                          </div>
+
+                          <div style={{ flex: 1 }}>
+                            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "10px", marginBottom: "8px" }}>
+                              <h3 style={{ fontSize: "1.25rem", fontWeight: 600 }}>Senior Secondary (Class XII â€” CBSE)</h3>
+                              <span style={{ fontSize: "0.85rem", fontFamily: "var(--font-mono)", color: "var(--secondary)", background: "rgba(6, 182, 212, 0.08)", padding: "4px 8px", borderRadius: "6px" }}>
+                                2023 Â· Grade: 85.2%
+                              </span>
+                            </div>
+                            <h4 style={{ fontSize: "1rem", color: "var(--primary)", fontWeight: 500, marginBottom: "12px" }}>
+                              Sant Atulanand Convent School, Varanasi
+                            </h4>
+                            <p style={{ color: "var(--slate-400)", fontSize: "0.9rem", lineHeight: 1.5, marginBottom: "14px" }}>
+                              Completed Class XII Senior Secondary Education under CBSE with major concentration in Science & Mathematics. Subjects: English, Mathematics, Physics, Chemistry, Physical Education. Achieved an overall aggregate score of 85.2%.
+                            </p>
+                            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
+                              <div style={{ fontSize: "0.85rem", color: "var(--foreground)", fontFamily: "var(--font-mono)" }}>
+                                <strong>Subjects:</strong> English, Mathematics, Physics, Chemistry, Physical Education
+                              </div>
+                              <a href="/student/verify/12th" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "4px", color: "var(--primary)", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none" }}>
+                                Verify Academic Record â†—
+                              </a>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              )}
+
+              {/* TAB: CERTIFICATES */}
+              {activeTab === "certificates" && (
+                <div style={{ animation: "fadeInUp 0.5s ease forwards" }}>
+                  <div className="cards-grid">
+                    {CERTS.map((cert) => (
+                      <div
+                        key={cert.url}
+                        className="glass-panel"
+                        style={{
+                          padding: "20px 22px",
+                          borderRadius: "16px",
+                          display: "flex",
+                          gap: "14px",
+                          alignItems: "flex-start",
+                          transition: "transform 0.22s ease, box-shadow 0.22s ease",
+                          borderTop: `2px solid ${cert.color}28`,
+                        }}
+                        onMouseEnter={(e) => {
+                          (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)";
+                          (e.currentTarget as HTMLElement).style.boxShadow = `0 16px 40px -8px ${cert.color}28`;
+                        }}
+                        onMouseLeave={(e) => {
+                          (e.currentTarget as HTMLElement).style.transform = "";
+                          (e.currentTarget as HTMLElement).style.boxShadow = "";
+                        }}
+                      >
+                        {/* Icon */}
+                        <div
+                          style={{
+                            width: "50px",
+                            height: "50px",
+                            borderRadius: "12px",
+                            background: cert.iconBg,
+                            border: `1px solid ${cert.color}22`,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexShrink: 0,
+                          }}
+                        >
+                          {cert.icon}
+                        </div>
+
+                        {/* Info */}
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <h3 style={{ fontSize: "0.87rem", fontWeight: 650, color: "var(--foreground)", margin: "0 0 3px", lineHeight: 1.4 }}>
+                            {cert.title}
+                          </h3>
+                          <p style={{ color: "var(--slate-400)", fontSize: "0.76rem", margin: "0 0 4px" }}>
+                            {cert.issuer} Â· {cert.year}
+                          </p>
+                          {cert.desc && (
+                            <p style={{ color: "var(--slate-400)", fontSize: "0.72rem", margin: "0 0 10px", lineHeight: 1.5, opacity: 0.8 }}>
+                              {cert.desc}
+                            </p>
+                          )}
+                          <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
+                            <span
+                              style={{
+                                fontSize: "0.65rem",
+                                fontWeight: 700,
+                                padding: "2px 8px",
+                                borderRadius: "6px",
+                                background: `${cert.color}15`,
+                                color: cert.color,
+                                border: `1px solid ${cert.color}25`,
+                                textTransform: "uppercase",
+                                letterSpacing: "0.05em",
+                              }}
+                            >
+                              {cert.platform}
+                            </span>
+                            <a
+                              href={cert.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{
+                                fontSize: "0.73rem",
+                                color: "var(--primary)",
+                                fontWeight: 500,
+                                textDecoration: "none",
+                              }}
+                            >
+                              View Certificate â†—
                             </a>
                           </div>
                         </div>
@@ -741,7 +1348,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h2 style={{ fontSize: "1.35rem", fontWeight: 700, margin: 0, color: "var(--foreground)" }}>My Research Papers</h2>
-                      <p style={{ color: "var(--slate-400)", fontSize: "0.78rem", margin: 0 }}>Peer-reviewed academic publications · Quantitative Finance & Mathematics</p>
+                      <p style={{ color: "var(--slate-400)", fontSize: "0.78rem", margin: 0 }}>Peer-reviewed academic publications Â· Quantitative Finance & Mathematics</p>
                     </div>
                   </div>
 
@@ -761,7 +1368,7 @@ export default function Home() {
                     {/* Badges */}
                     <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "14px" }}>
                       {[
-                        { label: "✦ Published · May 2026", bg: "rgba(6,182,212,0.12)", color: "#06b6d4", border: "rgba(6,182,212,0.25)" },
+                        { label: "âœ¦ Published Â· May 2026", bg: "rgba(6,182,212,0.12)", color: "#06b6d4", border: "rgba(6,182,212,0.25)" },
                         { label: "Peer Reviewed", bg: "rgba(16,185,129,0.12)", color: "#10b981", border: "rgba(16,185,129,0.25)" },
                         { label: "DOI: 10.2139/ssrn.6692678", bg: "rgba(139,92,246,0.12)", color: "#8b5cf6", border: "rgba(139,92,246,0.25)" },
                       ].map(b => (
@@ -783,13 +1390,13 @@ export default function Home() {
                       Department of Mathematics, Banaras Hindu University (BHU), Varanasi
                     </p>
                     <p style={{ color: "var(--primary)", fontSize: "0.79rem", margin: "0 0 16px", fontWeight: 500 }}>
-                      International Journal of Research Publication and Reviews · May 2026
+                      International Journal of Research Publication and Reviews Â· May 2026
                     </p>
 
                     <div style={{ background: "rgba(0,0,0,0.03)", borderRadius: "12px", padding: "14px 16px", marginBottom: "14px", borderLeft: "3px solid rgba(6,182,212,0.3)" }}>
                       <p style={{ color: "var(--slate-400)", fontSize: "0.82rem", lineHeight: 1.75, margin: 0 }}>
-                        <strong style={{ color: "var(--foreground)", fontSize: "0.72rem", textTransform: "uppercase" as const, letterSpacing: "0.06em" }}>Abstract — </strong>
-                        Investigates the limitations of Markowitz&apos;s Mean-Variance Optimization (MVO) — its sensitivity to estimation errors and instability during stressed market regimes — and evaluates Maximum Diversification (MD) portfolios as a robust alternative. Using data from the COVID-19 pandemic, the Russia-Ukraine conflict, and global interest rate tightening cycles, the study analyzes five major asset classes through Diversification Ratio, Sharpe Ratio, and realized volatility.
+                        <strong style={{ color: "var(--foreground)", fontSize: "0.72rem", textTransform: "uppercase" as const, letterSpacing: "0.06em" }}>Abstract â€” </strong>
+                        Investigates the limitations of Markowitz&apos;s Mean-Variance Optimization (MVO) â€” its sensitivity to estimation errors and instability during stressed market regimes â€” and evaluates Maximum Diversification (MD) portfolios as a robust alternative. Using data from the COVID-19 pandemic, the Russia-Ukraine conflict, and global interest rate tightening cycles, the study analyzes five major asset classes through Diversification Ratio, Sharpe Ratio, and realized volatility.
                       </p>
                     </div>
 
@@ -817,7 +1424,7 @@ export default function Home() {
                           background: lk.b, color: lk.c, border: `1px solid ${lk.br}`,
                           fontSize: "0.76rem", fontWeight: 600, textDecoration: "none",
                           transition: "opacity 0.2s ease",
-                        }}>{lk.label} ↗</a>
+                        }}>{lk.label} â†—</a>
                       ))}
                     </div>
                   </div>
@@ -853,7 +1460,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer>
-          <p>© {new Date().getFullYear()} Mohammad Quashan. Designed & built by Mohammad Quashan. All Rights Reserved.</p>
+          <p>Â© {new Date().getFullYear()} Mohammad Quashan. Designed & built by Mohammad Quashan. All Rights Reserved.</p>
         </footer>
 
       </div>

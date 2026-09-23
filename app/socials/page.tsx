@@ -48,37 +48,6 @@ export default function Page() {
                       </div>
                     </a>
 
-                    {/* Kaggle (Brilliant Cyan) */}
-                    <a href="https://www.kaggle.com/quashanshayan123ansari" target="_blank" rel="noopener noreferrer" className="glass-panel social-btn social-kaggle">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M19 2.25L11.5 12l7.5 9.75h-3.75L8.75 13.5v8.25H5.5V2.25h3.25v9L15.25 2.25H19z" fill="#20BEFF" />
-                      </svg>
-                      <div>
-                        <div style={{ fontWeight: 600 }}>Kaggle</div>
-                      </div>
-                    </a>
-
-                    {/* LeetCode (Vibrant Orange) */}
-                    <a href="https://leetcode.com/u/quashanshayan123ansari/" target="_blank" rel="noopener noreferrer" className="glass-panel social-btn social-leetcode">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M13.483 0a1.374 1.374 0 0 0-.961.411L7.11 5.823a1.372 1.372 0 0 0-.025 1.917l.025.026a1.372 1.372 0 0 0 1.917.025l5.228-5.011a1.372 1.372 0 0 0-.025-1.917L13.483 0zm5.111 8.248a1.375 1.375 0 0 0-1.917-.025L11.45 13.234a1.372 1.372 0 0 0-.025 1.917l.025.026a1.372 1.372 0 0 0 1.917.025l5.228-5.011a1.372 1.372 0 0 0-.025-1.917l-.001-.026zm-7.618 6.47l-1.637 1.637a1.372 1.372 0 0 1-1.94 0l-4.26-4.26a1.372 1.372 0 0 1 0-1.94l6.197-6.197c.536-.536 1.405-.536 1.94 0l1.638 1.637c.536.536.536 1.405 0 1.94l-5.228 5.228a1.372 1.372 0 0 0 0 1.94l3.29 3.29c.536.536.536 1.405 0 1.94l-.001.002z" fill="#FFA116" />
-                      </svg>
-                      <div>
-                        <div style={{ fontWeight: 600 }}>LeetCode</div>
-                      </div>
-                    </a>
-
-                    {/* HackerRank (Vibrant Green Block) */}
-                    <a href="https://www.hackerrank.com/profile/quashanshayan123ansari" target="_blank" rel="noopener noreferrer" className="glass-panel social-btn social-hackerrank">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <rect width="24" height="24" rx="5" fill="#2EC866" />
-                        <path d="M7 6h2.5v4h3V6H15v12h-2.5v-4.5h-3V18H7V6z" fill="#FFF" />
-                      </svg>
-                      <div>
-                        <div style={{ fontWeight: 600 }}>HackerRank</div>
-                      </div>
-                    </a>
-
                   </div>
 
                   {/* Elegant Separator */}
