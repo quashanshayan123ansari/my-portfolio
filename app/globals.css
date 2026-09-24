@@ -1,9 +1,9 @@
 /* ============================================================
    globals.css — Portfolio Design System
    Mohammad Quashan Ansari · Quantitative Finance · BHU
-   Last updated: Sep 23, 2026
+   FastHTML sticker-pack aesthetic — Sep 24, 2026
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;700&family=Fira+Code:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -13,7 +13,7 @@
   --primary-glow: rgba(245, 158, 11, 0.18);
   --secondary: #10b981; /* Emerald accent */
   --secondary-glow: rgba(16, 185, 129, 0.15);
-  --slate-400: #475569; /* Dark enough on white */
+  --slate-400: #475569;
   --slate-800: #1e293b;
   --slate-900: #0f172a;
   --border-color: rgba(0, 0, 0, 0.10);
@@ -21,6 +21,53 @@
   --glass-border: rgba(0, 0, 0, 0.08);
   --font-sans: 'Space Grotesk', 'Outfit', var(--font-geist-sans), Inter, system-ui, sans-serif;
   --font-mono: 'Fira Code', 'JetBrains Mono', var(--font-geist-mono), monospace;
+
+  /* ── FastHTML Design Tokens ───────────────────── */
+  /* Colors */
+  --color-sticker-green: #3cdd8c;
+  --color-sticker-yellow: #ffc435;
+  --color-sticker-pink: #e699d9;
+  --color-periwinkle-violet: #7575f0;
+  --color-soft-periwinkle: #939eeb;
+  --color-deep-aubergine: #3a2234;
+  --color-mint-cream: #d4f7e6;
+  --color-cotton-candy: #ffccf7;
+  --color-butter-cream: #ffeecc;
+  --color-lavender-mist: #e8e8fc;
+  --color-dusty-mauve: #eddee9;
+  --color-carbon: #000000;
+  --color-paper-white: #ffffff;
+  --color-fog: #f3f3f3;
+  --color-silver: #e5e7eb;
+  --color-ash: #cccccc;
+  --color-graphite: #999999;
+  --color-slate: #333333;
+
+  /* Fonts */
+  --font-geist: 'Geist', 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-geist-mono: 'Fira Code', 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Border Radii */
+  --radius-nav: 9999px;
+  --radius-tags: 9999px;
+  --radius-buttons: 9999px;
+  --radius-cards: 24px;
+  --radius-cards-sm: 16px;
+  --radius-images: 20px;
+  --radius-hero: 40px;
+
+  /* Shadows — sticker emboss */
+  --shadow-sticker: rgba(255,255,255,0.5) 0px 2px 2px 0px, rgba(0,0,0,0.2) 0px 3px 3px 0px;
+  --shadow-card:    rgba(255,255,255,0.1) 0px 2px 4px 0px inset, rgba(0,0,0,0.08) 0px 4px 8px 0px;
+
+  /* Spacing */
+  --sp-8: 8px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+  --sp-64: 64px;
+  --sp-96: 96px;
 }
 
 * {
@@ -1132,4 +1179,468 @@ div[class*="glow-"] {
 }
 
 
+/* ═══════════════════════════════════════════════════════
+   FASTHTML STICKER-PACK COMPONENT STYLES
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Pill Navigation ─────────────────────────────────── */
+.fh-nav-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--color-lavender-mist);
+  border-radius: var(--radius-nav);
+  padding: 8px 16px;
+  box-shadow: var(--shadow-sticker);
+  max-width: 560px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 50;
+}
+
+.fh-nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-geist);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-carbon);
+  text-decoration: none;
+}
+
+.fh-nav-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-carbon);
+  color: var(--color-paper-white);
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-geist);
+}
+
+/* ── Primary Black Pill Button (sticker style) ────────── */
+.fh-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-carbon);
+  color: var(--color-paper-white);
+  padding: 8px 24px;
+  border-radius: var(--radius-buttons);
+  font-family: var(--font-geist);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-sticker);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+.fh-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(255,255,255,0.6) 0px 3px 3px 0px, rgba(0,0,0,0.3) 0px 5px 5px 0px;
+}
+
+/* ── Ghost Pill Button ───────────────────────────────── */
+.fh-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--color-carbon);
+  padding: 8px 24px;
+  border-radius: var(--radius-buttons);
+  font-family: var(--font-geist);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1.5px solid var(--color-carbon);
+  cursor: pointer;
+  box-shadow: var(--shadow-sticker);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.fh-btn-ghost:hover {
+  background: rgba(0,0,0,0.05);
+  transform: translateY(-2px);
+}
+
+/* ── Pill Tag ─────────────────────────────────────────── */
+.fh-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: var(--radius-tags);
+  font-family: var(--font-geist);
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.fh-tag-dark {
+  background: var(--color-carbon);
+  color: var(--color-paper-white);
+}
+
+.fh-tag-outline {
+  background: transparent;
+  color: var(--color-carbon);
+  border-color: var(--color-silver);
+}
+
+.fh-tag-green {
+  background: var(--color-mint-cream);
+  color: #166534;
+  border-color: var(--color-sticker-green);
+}
+
+.fh-tag-violet {
+  background: var(--color-lavender-mist);
+  color: #3730a3;
+  border-color: var(--color-soft-periwinkle);
+}
+
+.fh-tag-yellow {
+  background: var(--color-butter-cream);
+  color: #854d0e;
+  border-color: var(--color-sticker-yellow);
+}
+
+.fh-tag-pink {
+  background: var(--color-cotton-candy);
+  color: #86198f;
+  border-color: var(--color-sticker-pink);
+}
+
+/* ── Tinted Feature Card ─────────────────────────────── */
+.fh-card {
+  border-radius: var(--radius-cards);
+  padding: var(--sp-32);
+  border: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fh-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.fh-card-lavender { background: var(--color-lavender-mist); }
+.fh-card-mint     { background: var(--color-mint-cream); }
+.fh-card-butter   { background: var(--color-butter-cream); }
+.fh-card-candy    { background: var(--color-cotton-candy); }
+.fh-card-mauve    { background: var(--color-dusty-mauve); }
+.fh-card-white    { background: var(--color-paper-white); }
+
+/* ── Section Band ─────────────────────────────────────── */
+.fh-band {
+  width: 100%;
+  padding: var(--sp-96) var(--sp-24);
+  position: relative;
+  overflow: hidden;
+}
+
+.fh-band-light    { background: var(--color-paper-white); }
+.fh-band-dark     { background: var(--color-deep-aubergine); }
+.fh-band-violet   { background: var(--color-periwinkle-violet); }
+
+.fh-band-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── Confetti Blob Shapes ─────────────────────────────── */
+.fh-blob {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  animation: blobFloat 8s ease-in-out infinite alternate;
+}
+
+@keyframes blobFloat {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  50%  { transform: translateY(-14px) rotate(4deg); }
+  100% { transform: translateY(4px) rotate(-3deg); }
+}
+
+.fh-blob-circle {
+  border-radius: 50%;
+}
+
+.fh-blob-rect {
+  border-radius: 40px;
+}
+
+.fh-blob-pill {
+  border-radius: 9999px;
+}
+
+.fh-blob-green  { background: var(--color-sticker-green); }
+.fh-blob-yellow { background: var(--color-sticker-yellow); }
+.fh-blob-pink   { background: var(--color-sticker-pink); }
+.fh-blob-violet { background: var(--color-periwinkle-violet); }
+
+/* ── Tab Pill Row ─────────────────────────────────────── */
+.fh-tabs-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0,0,0,0.08);
+  border-radius: 9999px;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+
+.fh-tab {
+  padding: 7px 18px;
+  border-radius: 9999px;
+  font-family: var(--font-geist);
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  color: var(--color-carbon);
+  white-space: nowrap;
+}
+
+.fh-tab:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+.fh-tab.active {
+  background: var(--color-paper-white);
+  box-shadow: var(--shadow-sticker);
+  color: var(--color-carbon);
+}
+
+/* ── Code Block ──────────────────────────────────────── */
+.fh-code-block {
+  border-radius: var(--radius-cards-sm);
+  background: #0d0d0d;
+  padding: 0;
+  overflow: hidden;
+}
+
+.fh-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  font-family: var(--font-geist);
+  font-size: 13px;
+  color: var(--color-ash);
+}
+
+.fh-code-body {
+  padding: 20px;
+  font-family: var(--font-geist-mono);
+  font-size: 13px;
+  line-height: 1.8;
+  color: #e2e8f0;
+  overflow-x: auto;
+}
+
+.fh-code-kw    { color: var(--color-soft-periwinkle); }
+.fh-code-str   { color: var(--color-sticker-green); }
+.fh-code-fn    { color: var(--color-sticker-yellow); }
+.fh-code-cmt   { color: var(--color-graphite); font-style: italic; }
+
+/* ── Metric Badge ─────────────────────────────────────── */
+.fh-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  background: var(--color-paper-white);
+  box-shadow: var(--shadow-card);
+}
+
+.fh-metric-val {
+  font-family: var(--font-geist);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-carbon);
+  letter-spacing: -0.01em;
+}
+
+.fh-metric-label {
+  font-family: var(--font-geist);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-graphite);
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* ── Project Card (sticker-pack variant) ─────────────── */
+.fh-project-card {
+  background: var(--color-paper-white);
+  border-radius: var(--radius-cards);
+  padding: var(--sp-32);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1.5px solid var(--color-silver);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.fh-project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-carbon);
+  box-shadow: rgba(255,255,255,0.5) 0px 2px 2px 0px, rgba(0,0,0,0.15) 0px 12px 24px 0px;
+}
+
+/* ── Stats Banner (dark band stat row) ───────────────── */
+.fh-stats-banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.fh-stats-cell {
+  background: var(--color-deep-aubergine);
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.fh-stats-val {
+  font-family: var(--font-geist);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-paper-white);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.fh-stats-label {
+  font-family: var(--font-geist);
+  font-size: 13px;
+  color: var(--color-ash);
+  margin-top: 6px;
+}
+
+/* ── FAQ Accordion Card ──────────────────────────────── */
+.fh-accordion {
+  background: var(--color-paper-white);
+  border-radius: var(--radius-cards-sm);
+  padding: 20px 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: background 0.2s ease;
+  font-family: var(--font-geist);
+}
+
+.fh-accordion:hover {
+  background: rgba(255,255,255,0.92);
+}
+
+.fh-accordion-q {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-carbon);
+  line-height: 1.4;
+}
+
+.fh-accordion-icon {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--color-carbon);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.fh-accordion.open .fh-accordion-icon {
+  transform: rotate(45deg);
+}
+
+.fh-accordion-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 24px;
+  background: var(--color-paper-white);
+  font-size: 14px;
+  color: var(--color-graphite);
+  line-height: 1.65;
+  border-radius: 0 0 var(--radius-cards-sm) var(--radius-cards-sm);
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              padding 0.35s ease;
+}
+
+.fh-accordion-answer.open {
+  max-height: 200px;
+  padding: 0 24px 20px;
+}
+
+/* ── Eyebrow Label ───────────────────────────────────── */
+.fh-eyebrow {
+  font-family: var(--font-geist);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-carbon);
+  opacity: 0.65;
+}
+
+/* ── Section Heading ─────────────────────────────────── */
+.fh-heading {
+  font-family: var(--font-geist);
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.6px;
+  color: var(--color-carbon);
+}
+
+.fh-heading-white {
+  color: var(--color-paper-white);
+}
+
+.fh-display {
+  font-family: var(--font-geist);
+  font-size: clamp(48px, 7vw, 72px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -1.08px;
+  color: var(--color-carbon);
+}
+
+/* ── Accent Span for inline color ────────────────────── */
+.fh-accent-green  { color: #166534; }
+.fh-accent-violet { color: var(--color-periwinkle-violet); }
+
+/* ── Hero CTA row ────────────────────────────────────── */
+.fh-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
