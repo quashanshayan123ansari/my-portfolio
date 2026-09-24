@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function NeuralGraphPage() {
   return (
-    <main style={{ width: "100vw", height: "100vh", overflow: "hidden", background: "#121212" }}>
+    <main style={{ width: "100vw", height: "100vh", overflow: "hidden", background: "#eef2ff" }}>
       <MasterNeuralGraph />
     </main>
   );

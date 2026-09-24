@@ -7,18 +7,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #030712; /* Deep space dark background */
-  --foreground: #f8fafc; /* Clean bright text */
-  --primary: #f59e0b; /* Glowing Amber */
-  --primary-glow: rgba(245, 158, 11, 0.15);
-  --secondary: #10b981; /* Glowing Emerald */
+  --background: #fafaf7; /* Warm off-white */
+  --foreground: #0f172a; /* Deep navy text */
+  --primary: #f59e0b; /* Amber accent */
+  --primary-glow: rgba(245, 158, 11, 0.18);
+  --secondary: #10b981; /* Emerald accent */
   --secondary-glow: rgba(16, 185, 129, 0.15);
-  --slate-400: #94a3b8; /* Readable Slate text in dark mode */
-  --slate-800: #cbd5e1;
-  --slate-900: #f8fafc;
-  --border-color: rgba(255, 255, 255, 0.12);
-  --glass-bg: rgba(15, 23, 42, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.14);
+  --slate-400: #475569; /* Dark enough on white */
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --border-color: rgba(0, 0, 0, 0.10);
+  --glass-bg: rgba(255, 255, 255, 0.80);
+  --glass-border: rgba(0, 0, 0, 0.08);
   --font-sans: 'Space Grotesk', 'Outfit', var(--font-geist-sans), Inter, system-ui, sans-serif;
   --font-mono: 'Fira Code', 'JetBrains Mono', var(--font-geist-mono), monospace;
 }
@@ -68,7 +68,7 @@ body {
 }
 
 .page-root::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
@@ -78,7 +78,7 @@ body {
 
 /* Custom CSS Gradients */
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, var(--primary) 55%, var(--secondary) 100%);
+  background: linear-gradient(135deg, #0f172a 0%, var(--primary) 55%, var(--secondary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -90,19 +90,19 @@ body {
 
 /* Glassmorphism Classes */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.75);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--glass-border);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 16px;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  color: #f8fafc;
+  color: #0f172a;
 }
 
 .glass-panel:hover {
   border-color: var(--primary);
-  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.6), 0 0 20px 0 var(--primary-glow);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.12), 0 0 20px 0 var(--primary-glow);
 }
 
 /* Hero Title animations */
@@ -470,14 +470,14 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
+  background: rgba(0, 0, 0, 0.04);
+  color: #0f172a;
   padding: 12px 28px;
   border-radius: 50px;
   font-size: 0.95rem;
   font-weight: 500;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -486,8 +486,8 @@ footer {
 
 .btn-xai-outline:hover {
   border-color: var(--primary);
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
+  background: rgba(245, 158, 11, 0.07);
+  color: #0f172a;
   transform: translateY(-2px);
   box-shadow: 0 0 20px var(--primary-glow);
 }
@@ -679,7 +679,7 @@ footer {
 @property --background {
   syntax: '<color>';
   inherits: true;
-  initial-value: #030303;
+  initial-value: #fafaf7;
 }
 
 @property --foreground {
@@ -763,165 +763,165 @@ div[class*="glow-"] {
 
 
 .glow-education {
-  --glow-color-1: rgba(139, 92, 246, 0.25);
-  --glow-color-2: rgba(124, 58, 237, 0.15);
-  --glow-core-1: rgba(139, 92, 246, 0.4);
-  --glow-core-2: rgba(168, 85, 247, 0.2);
-  --glow-core-3: rgba(139, 92, 246, 0.1);
-  --primary: #c084fc;
-  --secondary: #a855f7;
-  --primary-glow: rgba(168, 85, 247, 0.2);
-  --secondary-glow: rgba(139, 92, 246, 0.2);
-  --background: #070314;
-  --foreground: #ffffff;
-  --slate-400: #cbd5e1;
-  --slate-800: #e2e8f0;
-  --slate-900: #f8fafc;
-  --border-color: rgba(168, 85, 247, 0.3);
-  --glass-bg: rgba(24, 15, 46, 0.85);
-  --glass-border: rgba(168, 85, 247, 0.25);
+  --glow-color-1: rgba(139, 92, 246, 0.10);
+  --glow-color-2: rgba(124, 58, 237, 0.06);
+  --glow-core-1: rgba(139, 92, 246, 0.18);
+  --glow-core-2: rgba(168, 85, 247, 0.10);
+  --glow-core-3: rgba(139, 92, 246, 0.05);
+  --primary: #9333ea;
+  --secondary: #7c3aed;
+  --primary-glow: rgba(147, 51, 234, 0.15);
+  --secondary-glow: rgba(124, 58, 237, 0.10);
+  --background: #f5f3ff; /* soft lavender */
+  --foreground: #1e1245;
+  --slate-400: #4c4571;
+  --slate-800: #1e1245;
+  --slate-900: #0f0a2e;
+  --border-color: rgba(139, 92, 246, 0.16);
+  --glass-bg: rgba(245, 243, 255, 0.90);
+  --glass-border: rgba(139, 92, 246, 0.14);
 }
 
 .glow-certificates {
-  --glow-color-1: rgba(244, 63, 94, 0.25);
-  --glow-color-2: rgba(225, 29, 72, 0.15);
-  --glow-core-1: rgba(244, 63, 94, 0.4);
-  --glow-core-2: rgba(251, 113, 133, 0.2);
-  --glow-core-3: rgba(244, 63, 94, 0.1);
-  --primary: #fb7185;
-  --secondary: #f43f5e;
-  --primary-glow: rgba(244, 63, 94, 0.2);
-  --secondary-glow: rgba(225, 29, 72, 0.2);
-  --background: #0f0205;
-  --foreground: #ffffff;
-  --slate-400: #cbd5e1;
-  --slate-800: #e2e8f0;
-  --slate-900: #f8fafc;
-  --border-color: rgba(244, 63, 94, 0.3);
-  --glass-bg: rgba(40, 10, 18, 0.85);
-  --glass-border: rgba(244, 63, 94, 0.25);
+  --glow-color-1: rgba(239, 68, 68, 0.10);
+  --glow-color-2: rgba(220, 38, 38, 0.06);
+  --glow-core-1: rgba(239, 68, 68, 0.18);
+  --glow-core-2: rgba(248, 113, 113, 0.10);
+  --glow-core-3: rgba(239, 68, 68, 0.05);
+  --primary: #e11d48;
+  --secondary: #be123c;
+  --primary-glow: rgba(225, 29, 72, 0.15);
+  --secondary-glow: rgba(190, 18, 60, 0.10);
+  --background: #fff1f2; /* soft rose */
+  --foreground: #4c0519;
+  --slate-400: #6b304a;
+  --slate-800: #4c0519;
+  --slate-900: #3b0011;
+  --border-color: rgba(239, 68, 68, 0.16);
+  --glass-bg: rgba(255, 241, 242, 0.90);
+  --glass-border: rgba(225, 29, 72, 0.14);
 }
 
 .glow-socials {
-  --glow-color-1: rgba(217, 70, 239, 0.25);
-  --glow-color-2: rgba(192, 38, 211, 0.15);
-  --glow-core-1: rgba(217, 70, 239, 0.4);
-  --glow-core-2: rgba(232, 121, 249, 0.2);
-  --glow-core-3: rgba(217, 70, 239, 0.1);
-  --primary: #f0abfc;
-  --secondary: #d946ef;
-  --primary-glow: rgba(217, 70, 239, 0.2);
-  --secondary-glow: rgba(192, 38, 211, 0.2);
-  --background: #0f0212;
-  --foreground: #ffffff;
-  --slate-400: #cbd5e1;
-  --slate-800: #e2e8f0;
-  --slate-900: #f8fafc;
-  --border-color: rgba(217, 70, 239, 0.3);
-  --glass-bg: rgba(38, 10, 42, 0.85);
-  --glass-border: rgba(217, 70, 239, 0.25);
+  --glow-color-1: rgba(217, 70, 239, 0.10);
+  --glow-color-2: rgba(192, 38, 211, 0.06);
+  --glow-core-1: rgba(217, 70, 239, 0.18);
+  --glow-core-2: rgba(232, 121, 249, 0.10);
+  --glow-core-3: rgba(217, 70, 239, 0.05);
+  --primary: #c026d3;
+  --secondary: #a21caf;
+  --primary-glow: rgba(192, 38, 211, 0.15);
+  --secondary-glow: rgba(162, 28, 175, 0.10);
+  --background: #fdf4ff; /* soft fuchsia */
+  --foreground: #4a044e;
+  --slate-400: #6b2177;
+  --slate-800: #4a044e;
+  --slate-900: #2e0234;
+  --border-color: rgba(217, 70, 239, 0.16);
+  --glass-bg: rgba(253, 244, 255, 0.90);
+  --glass-border: rgba(192, 38, 211, 0.14);
 }
 
 .glow-finance {
-  --glow-color-1: rgba(6, 182, 212, 0.25);
-  --glow-color-2: rgba(14, 165, 233, 0.15);
-  --glow-core-1: rgba(6, 182, 212, 0.4);
-  --glow-core-2: rgba(56, 189, 248, 0.2);
-  --glow-core-3: rgba(6, 182, 212, 0.1);
-  --primary: #38bdf8;
-  --secondary: #06b6d4;
-  --primary-glow: rgba(6, 182, 212, 0.2);
-  --secondary-glow: rgba(14, 165, 233, 0.2);
-  --background: #020c14;
-  --foreground: #ffffff;
-  --slate-400: #cbd5e1;
-  --slate-800: #e2e8f0;
-  --slate-900: #f8fafc;
-  --border-color: rgba(6, 182, 212, 0.3);
-  --glass-bg: rgba(8, 30, 48, 0.85);
-  --glass-border: rgba(6, 182, 212, 0.25);
+  --glow-color-1: rgba(6, 182, 212, 0.10);
+  --glow-color-2: rgba(14, 165, 233, 0.06);
+  --glow-core-1: rgba(6, 182, 212, 0.18);
+  --glow-core-2: rgba(56, 189, 248, 0.10);
+  --glow-core-3: rgba(6, 182, 212, 0.05);
+  --primary: #0891b2;
+  --secondary: #0e7490;
+  --primary-glow: rgba(8, 145, 178, 0.15);
+  --secondary-glow: rgba(14, 116, 144, 0.10);
+  --background: #ecfeff; /* soft sky cyan */
+  --foreground: #0c2b3a;
+  --slate-400: #1e5063;
+  --slate-800: #0c2b3a;
+  --slate-900: #061922;
+  --border-color: rgba(6, 182, 212, 0.18);
+  --glass-bg: rgba(236, 254, 255, 0.90);
+  --glass-border: rgba(6, 182, 212, 0.15);
 }
 
 .glow-corporate {
-  --glow-color-1: rgba(16, 185, 129, 0.25);
-  --glow-color-2: rgba(34, 197, 94, 0.15);
-  --glow-core-1: rgba(16, 185, 129, 0.4);
-  --glow-core-2: rgba(74, 222, 128, 0.2);
-  --glow-core-3: rgba(16, 185, 129, 0.1);
-  --primary: #4ade80;
-  --secondary: #10b981;
-  --primary-glow: rgba(16, 185, 129, 0.2);
-  --secondary-glow: rgba(34, 197, 94, 0.2);
-  --background: #02120a;
-  --foreground: #ffffff;
-  --slate-400: #cbd5e1;
-  --slate-800: #e2e8f0;
-  --slate-900: #f8fafc;
-  --border-color: rgba(16, 185, 129, 0.3);
-  --glass-bg: rgba(8, 36, 22, 0.85);
-  --glass-border: rgba(16, 185, 129, 0.25);
+  --glow-color-1: rgba(16, 185, 129, 0.10);
+  --glow-color-2: rgba(34, 197, 94, 0.06);
+  --glow-core-1: rgba(16, 185, 129, 0.18);
+  --glow-core-2: rgba(74, 222, 128, 0.10);
+  --glow-core-3: rgba(16, 185, 129, 0.05);
+  --primary: #059669;
+  --secondary: #047857;
+  --primary-glow: rgba(5, 150, 105, 0.15);
+  --secondary-glow: rgba(4, 120, 87, 0.10);
+  --background: #f0fdf4; /* soft sage green */
+  --foreground: #052e16;
+  --slate-400: #1a4731;
+  --slate-800: #052e16;
+  --slate-900: #021a0d;
+  --border-color: rgba(16, 185, 129, 0.18);
+  --glass-bg: rgba(240, 253, 244, 0.90);
+  --glass-border: rgba(16, 185, 129, 0.15);
 }
 
 .glow-projects {
-  --glow-color-1: rgba(245, 158, 11, 0.25);
-  --glow-color-2: rgba(217, 119, 6, 0.15);
-  --glow-core-1: rgba(245, 158, 11, 0.4);
-  --glow-core-2: rgba(251, 191, 36, 0.2);
-  --glow-core-3: rgba(245, 158, 11, 0.1);
-  --primary: #fbbf24;
-  --secondary: #f59e0b;
-  --primary-glow: rgba(245, 158, 11, 0.2);
-  --secondary-glow: rgba(217, 119, 6, 0.2);
-  --background: #140902;
-  --foreground: #ffffff;
-  --slate-400: #cbd5e1;
-  --slate-800: #e2e8f0;
-  --slate-900: #f8fafc;
-  --border-color: rgba(245, 158, 11, 0.3);
-  --glass-bg: rgba(38, 20, 8, 0.85);
-  --glass-border: rgba(245, 158, 11, 0.25);
+  --glow-color-1: rgba(245, 158, 11, 0.10);
+  --glow-color-2: rgba(217, 119, 6, 0.06);
+  --glow-core-1: rgba(245, 158, 11, 0.18);
+  --glow-core-2: rgba(251, 191, 36, 0.10);
+  --glow-core-3: rgba(245, 158, 11, 0.05);
+  --primary: #d97706;
+  --secondary: #b45309;
+  --primary-glow: rgba(217, 119, 6, 0.15);
+  --secondary-glow: rgba(180, 83, 9, 0.10);
+  --background: #fffbeb; /* soft amber cream */
+  --foreground: #3b1c00;
+  --slate-400: #6b3a12;
+  --slate-800: #3b1c00;
+  --slate-900: #230f00;
+  --border-color: rgba(245, 158, 11, 0.18);
+  --glass-bg: rgba(255, 251, 235, 0.90);
+  --glass-border: rgba(217, 119, 6, 0.15);
 }
 
 /* ── RESEARCH TAB ── */
 .glow-research {
-  --glow-color-1: rgba(20, 184, 166, 0.25);
-  --glow-color-2: rgba(6, 182, 212, 0.15);
-  --glow-core-1: rgba(20, 184, 166, 0.4);
-  --glow-core-2: rgba(45, 212, 191, 0.2);
-  --glow-core-3: rgba(20, 184, 166, 0.1);
-  --primary: #2dd4bf;
-  --secondary: #14b8a6;
-  --primary-glow: rgba(20, 184, 166, 0.2);
-  --secondary-glow: rgba(6, 182, 212, 0.2);
-  --background: #021011;
-  --foreground: #ffffff;
-  --slate-400: #cbd5e1;
-  --slate-800: #e2e8f0;
-  --slate-900: #f8fafc;
-  --border-color: rgba(20, 184, 166, 0.3);
-  --glass-bg: rgba(8, 34, 35, 0.85);
-  --glass-border: rgba(20, 184, 166, 0.25);
+  --glow-color-1: rgba(20, 184, 166, 0.10);
+  --glow-color-2: rgba(6, 182, 212, 0.06);
+  --glow-core-1: rgba(20, 184, 166, 0.18);
+  --glow-core-2: rgba(45, 212, 191, 0.10);
+  --glow-core-3: rgba(20, 184, 166, 0.05);
+  --primary: #0d9488;
+  --secondary: #0f766e;
+  --primary-glow: rgba(13, 148, 136, 0.15);
+  --secondary-glow: rgba(15, 118, 110, 0.10);
+  --background: #f0fdfa; /* soft mint teal */
+  --foreground: #0d2b28;
+  --slate-400: #1b4f49;
+  --slate-800: #0d2b28;
+  --slate-900: #051916;
+  --border-color: rgba(20, 184, 166, 0.18);
+  --glass-bg: rgba(240, 253, 250, 0.90);
+  --glass-border: rgba(13, 148, 136, 0.15);
 }
 
 /* ── NEURAL TAB ── */
 .glow-neural {
-  --glow-color-1: rgba(99, 102, 241, 0.25);
-  --glow-color-2: rgba(139, 92, 246, 0.15);
-  --glow-core-1: rgba(99, 102, 241, 0.4);
-  --glow-core-2: rgba(129, 140, 248, 0.2);
-  --glow-core-3: rgba(99, 102, 241, 0.1);
-  --primary: #818cf8;
-  --secondary: #6366f1;
-  --primary-glow: rgba(99, 102, 241, 0.2);
-  --secondary-glow: rgba(139, 92, 246, 0.2);
-  --background: #040517;
-  --foreground: #ffffff;
-  --slate-400: #cbd5e1;
-  --slate-800: #e2e8f0;
-  --slate-900: #f8fafc;
-  --border-color: rgba(99, 102, 241, 0.3);
-  --glass-bg: rgba(18, 22, 54, 0.85);
-  --glass-border: rgba(99, 102, 241, 0.25);
+  --glow-color-1: rgba(99, 102, 241, 0.10);
+  --glow-color-2: rgba(139, 92, 246, 0.06);
+  --glow-core-1: rgba(99, 102, 241, 0.18);
+  --glow-core-2: rgba(129, 140, 248, 0.10);
+  --glow-core-3: rgba(99, 102, 241, 0.05);
+  --primary: #4f46e5;
+  --secondary: #4338ca;
+  --primary-glow: rgba(79, 70, 229, 0.15);
+  --secondary-glow: rgba(67, 56, 202, 0.10);
+  --background: #eef2ff; /* soft indigo */
+  --foreground: #1e1b4b;
+  --slate-400: #3730a3;
+  --slate-800: #1e1b4b;
+  --slate-900: #0f0e2e;
+  --border-color: rgba(99, 102, 241, 0.18);
+  --glass-bg: rgba(238, 242, 255, 0.90);
+  --glass-border: rgba(79, 70, 229, 0.15);
 }
 
 
@@ -1076,26 +1076,7 @@ div[class*="glow-"] {
   animation: fadeOutLabel 2s forwards ease-out;
 }
 
-/* ── CERTIFICATES TAB ── */
-.glow-certificates {
-  --glow-color-1: rgba(6, 182, 212, 0.25);
-  --glow-color-2: rgba(14, 165, 233, 0.15);
-  --glow-core-1: rgba(6, 182, 212, 0.4);
-  --glow-core-2: rgba(56, 189, 248, 0.2);
-  --glow-core-3: rgba(6, 182, 212, 0.1);
-  --primary: #06b6d4;
-  --secondary: #0ea5e9;
-  --primary-glow: rgba(6, 182, 212, 0.2);
-  --secondary-glow: rgba(14, 165, 233, 0.2);
-  --background: #020c14;
-  --foreground: #ffffff;
-  --slate-400: #cbd5e1;
-  --slate-800: #e2e8f0;
-  --slate-900: #f8fafc;
-  --border-color: rgba(6, 182, 212, 0.3);
-  --glass-bg: rgba(8, 30, 48, 0.85);
-  --glass-border: rgba(6, 182, 212, 0.25);
-}
+/* flip card hover shadow tuned for light backgrounds */
 
 /* ══════════════════════════════════════════════
    3D FLIP CARD SYSTEM
@@ -1147,7 +1128,7 @@ div[class*="glow-"] {
 /* 6. Subtle shimmer on hover for premium feel */
 .flip-card-wrapper:hover .flip-card-front,
 .flip-card-wrapper:hover .flip-card-back {
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 
