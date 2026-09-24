@@ -24,6 +24,7 @@ export const CERTS = [
     ),
     category: "Finance & Business",
     desc: "Deconstructing income statements, balance sheets, and cash flow statements for financial analysis.",
+    skills: ["Financial Analysis", "Income Statements", "Balance Sheet Valuation", "Cash Flow Mechanics", "Ratio Analysis"]
   },
   {
     title: "Introduction to 3-Statement Modeling",
@@ -41,6 +42,7 @@ export const CERTS = [
     ),
     category: "Finance & Business",
     desc: "Income statement, balance sheet, cash flow statement integration and financial model building.",
+    skills: ["3-Statement Integration", "Financial Modeling", "Debt Schedules", "Working Capital", "DCF Fundamentals"]
   },
   {
     title: "McKinsey Forward Program",
@@ -58,6 +60,7 @@ export const CERTS = [
     ),
     category: "Leadership",
     desc: "Problem-solving, communication, adaptable mindset & digital toolkit for future of work.",
+    skills: ["Problem Solving", "Strategic Communication", "Agile Leadership", "Digital Toolkit", "Adaptability"]
   },
   {
     title: "Financial Markets",
@@ -75,6 +78,7 @@ export const CERTS = [
     ),
     category: "Finance & Business",
     desc: "Risk management, behavioral finance, market mechanics and financial innovation.",
+    skills: ["Behavioral Finance", "Risk Management", "Market Structure", "Asset Pricing", "Financial Innovation"]
   },
   {
     title: "Portfolio Optimization using Markowitz Model",
@@ -92,6 +96,7 @@ export const CERTS = [
     ),
     category: "Finance & Business",
     desc: "Mean-variance optimization, efficient frontier construction and portfolio theory.",
+    skills: ["Markowitz MVO", "Efficient Frontier", "Covariance Matrices", "Sharpe Ratio", "Risk Parity"]
   },
   {
     title: "Investment Banking Job Simulation",
@@ -109,6 +114,7 @@ export const CERTS = [
     ),
     category: "Finance & Business",
     desc: "Financial modeling, strategic alternatives, pitchbook preparation and M&A analysis.",
+    skills: ["M&A Valuation", "Pitchbook Prep", "Comps Analysis", "DCF Modeling", "LBO Fundamentals"]
   },
   {
     title: "Goldman Sachs Job Simulation",
@@ -126,6 +132,7 @@ export const CERTS = [
     ),
     category: "Finance & Business",
     desc: "Risk management, quantitative analysis and financial operations simulation.",
+    skills: ["Quantitative Risk Analysis", "Financial Operations", "Asset Management", "Trade Settlement", "Scenario Modeling"]
   },
   {
     title: "Deloitte Data Analytics Job Simulation",
@@ -143,6 +150,7 @@ export const CERTS = [
     ),
     category: "Data & Analytics",
     desc: "Data visualization, business analysis, forensic tech and analytical problem-solving.",
+    skills: ["Data Visualization", "Forensic Tech", "Business Intelligence", "Analytics", "Root-Cause Analysis"]
   },
   {
     title: "BCG Strategy Consulting Job Simulation",
@@ -160,6 +168,7 @@ export const CERTS = [
     ),
     category: "Leadership",
     desc: "Strategic analysis, market sizing, hypothesis-driven consulting problem-solving.",
+    skills: ["Market Sizing", "Consulting Frameworks", "Hypothesis-Driven Problem Solving", "Strategic Analysis", "Market Entry"]
   },
   {
     title: "JPMorgan Chase Software Engineering Job Simulation",
@@ -177,6 +186,7 @@ export const CERTS = [
     ),
     category: "Programming",
     desc: "Python, React, financial data feeds, real-time data visualization with Perspective.",
+    skills: ["Python", "React", "Financial Data Streams", "Perspective Framework", "Real-Time Data"]
   },
   {
     title: "MATLAB Onramp",
@@ -194,7 +204,7 @@ export const CERTS = [
     ),
     category: "Programming",
     desc: "100% completion — MATLAB fundamentals, scripting, data analysis & visualization.",
-    date: "17 August 2025",
+    skills: ["MATLAB Scripting", "Matrix Computations", "Data Graphics", "Algorithmic Functions", "Numerical Methods"]
   },
   {
     title: "HP LIFE Digital Marketing",
@@ -212,7 +222,8 @@ export const CERTS = [
     ),
     category: "Leadership",
     desc: "Digital entrepreneurship, business fundamentals and technology literacy.",
-  },
+    skills: ["Digital Marketing", "SEO/SEM Basics", "Audience Analytics", "Entrepreneurship", "Value Proposition"]
+  }
 ];
 
 /* ─────────────────────────────────────────
@@ -287,7 +298,7 @@ export default function Page() {
                 Credentials & Research
               </h1>
               <p style={{ color: "var(--slate-400)", fontSize: "1rem", maxWidth: "520px", margin: "0 auto 1.5rem", lineHeight: 1.75 }}>
-                Verified licenses from McKinsey, Yale, Goldman Sachs, Deloitte, BCG, JPMorgan & more — plus peer-reviewed research in quantitative finance.
+                Verified licenses from McKinsey, Yale, Goldman Sachs, Deloitte, BCG, JPMorgan & more — hover any card to flip & view skills gained!
               </p>
               <a href="https://www.linkedin.com/in/mqansari123" target="_blank" rel="noopener noreferrer"
                 style={{
@@ -304,7 +315,7 @@ export default function Page() {
             </div>
 
             {/* ══════════════════════════════════
-                SECTION 1 — CERTIFICATES
+                SECTION 1 — CERTIFICATES (3D FLIP CARDS)
             ══════════════════════════════════ */}
             <section style={{ marginBottom: "5rem" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "1.5rem" }}>
@@ -320,7 +331,7 @@ export default function Page() {
                 </div>
                 <div>
                   <h2 style={{ fontSize: "1.45rem", fontWeight: 700, margin: 0, color: "var(--foreground)" }}>Licenses & Certifications</h2>
-                  <p style={{ color: "var(--slate-400)", fontSize: "0.78rem", margin: 0 }}>McKinsey · Yale · Goldman Sachs · BCG · Deloitte · JPMorgan · MathWorks · HP</p>
+                  <p style={{ color: "var(--slate-400)", fontSize: "0.78rem", margin: 0 }}>Hover on any card to flip and view skills gained in each program</p>
                 </div>
               </div>
 
@@ -340,50 +351,159 @@ export default function Page() {
                 ))}
               </div>
 
-              {/* Grid */}
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "14px" }}>
+              {/* Grid of 3D Flip Cards */}
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "20px" }}>
                 {filtered.map((cert, i) => (
-                  <div key={cert.url} className="glass-panel" style={{
-                    padding: "20px 22px", borderRadius: "16px", display: "flex", gap: "14px",
-                    alignItems: "flex-start", transition: "transform 0.22s ease, box-shadow 0.22s ease",
-                    animation: `fadeInUp 0.45s ease ${i * 0.04}s forwards`, opacity: 0,
-                    borderTop: `2px solid ${cert.color}28`,
-                  }}
-                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)"; (e.currentTarget as HTMLElement).style.boxShadow = `0 16px 40px -8px ${cert.color}28`; }}
-                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = ""; (e.currentTarget as HTMLElement).style.boxShadow = ""; }}
-                  >
-                    {/* Icon */}
-                    <div style={{
-                      width: "50px", height: "50px", borderRadius: "12px",
-                      background: cert.iconBg, border: `1px solid ${cert.color}22`,
-                      display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
-                    }}>{cert.icon}</div>
+                  <div key={cert.url} className="flip-card-wrapper" style={{ animation: `fadeInUp 0.45s ease ${i * 0.04}s forwards`, opacity: 0 }}>
+                    <div className="flip-card-inner">
+                      
+                      {/* FRONT FACE */}
+                      <div
+                        className="glass-panel flip-card-front"
+                        style={{
+                          padding: "20px 22px",
+                          display: "flex",
+                          gap: "14px",
+                          alignItems: "flex-start",
+                          borderTop: `2px solid ${cert.color}`,
+                          background: "rgba(15, 23, 42, 0.85)"
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: "50px",
+                            height: "50px",
+                            borderRadius: "12px",
+                            background: cert.iconBg,
+                            border: `1px solid ${cert.color}22`,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexShrink: 0
+                          }}
+                        >
+                          {cert.icon}
+                        </div>
 
-                    {/* Info */}
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <h3 style={{ fontSize: "0.87rem", fontWeight: 650, color: "var(--foreground)", margin: "0 0 3px", lineHeight: 1.4 }}>
-                        {cert.title}
-                      </h3>
-                      <p style={{ color: "var(--slate-400)", fontSize: "0.76rem", margin: "0 0 4px" }}>
-                        {cert.issuer} · {cert.year}
-                      </p>
-                      {cert.desc && (
-                        <p style={{ color: "var(--slate-400)", fontSize: "0.72rem", margin: "0 0 10px", lineHeight: 1.5, opacity: 0.8 }}>
-                          {cert.desc}
-                        </p>
-                      )}
-                      <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
-                        <span style={{
-                          fontSize: "0.65rem", fontWeight: 700, padding: "2px 8px", borderRadius: "6px",
-                          background: `${cert.color}15`, color: cert.color,
-                          border: `1px solid ${cert.color}25`, textTransform: "uppercase", letterSpacing: "0.05em",
-                        }}>{cert.platform}</span>
-                        <a href={cert.url} target="_blank" rel="noopener noreferrer" style={{
-                          fontSize: "0.73rem", color: "var(--primary)", fontWeight: 500, textDecoration: "none",
-                        }}>
-                          View Certificate ↗
-                        </a>
+                        <div style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%" }}>
+                          <div>
+                            <h3 style={{ fontSize: "0.87rem", fontWeight: 650, color: "var(--foreground)", margin: "0 0 3px", lineHeight: 1.4 }}>
+                              {cert.title}
+                            </h3>
+                            <p style={{ color: "var(--slate-400)", fontSize: "0.76rem", margin: "0 0 4px" }}>
+                              {cert.issuer} · {cert.year}
+                            </p>
+                            {cert.desc && (
+                              <p style={{ color: "var(--slate-400)", fontSize: "0.72rem", margin: "0 0 10px", lineHeight: 1.45, opacity: 0.85 }}>
+                                {cert.desc}
+                              </p>
+                            )}
+                          </div>
+
+                          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "8px" }}>
+                            <span
+                              style={{
+                                fontSize: "0.65rem",
+                                fontWeight: 700,
+                                padding: "2px 8px",
+                                borderRadius: "6px",
+                                background: `${cert.color}15`,
+                                color: cert.color,
+                                border: `1px solid ${cert.color}25`,
+                                textTransform: "uppercase",
+                                letterSpacing: "0.05em"
+                              }}
+                            >
+                              {cert.platform}
+                            </span>
+                            
+                            <span style={{ fontSize: "0.68rem", color: "var(--slate-400)", fontStyle: "italic", display: "inline-flex", alignItems: "center", gap: "3px" }}>
+                              Hover to flip 🔄
+                            </span>
+                          </div>
+                        </div>
                       </div>
+
+                      {/* BACK FACE (SKILLS GAINED) */}
+                      <div
+                        className="glass-panel flip-card-back"
+                        style={{
+                          padding: "20px 22px",
+                          borderTop: `2px solid ${cert.color}`,
+                          background: `radial-gradient(circle at 100% 0%, ${cert.color}20 0%, rgba(15, 23, 42, 0.95) 80%)`,
+                          borderColor: `${cert.color}40`
+                        }}
+                      >
+                        <div>
+                          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
+                            <span style={{
+                              fontSize: "0.65rem",
+                              fontWeight: 750,
+                              padding: "3px 9px",
+                              borderRadius: "12px",
+                              background: `${cert.color}20`,
+                              color: cert.color,
+                              border: `1px solid ${cert.color}40`,
+                              letterSpacing: "0.06em",
+                              textTransform: "uppercase"
+                            }}>
+                              💡 SKILLS GAINED
+                            </span>
+                            <span style={{ fontSize: "0.7rem", color: "var(--slate-400)", fontFamily: "var(--font-mono)" }}>
+                              {cert.platform}
+                            </span>
+                          </div>
+
+                          <h4 style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--foreground)", margin: "0 0 10px", lineHeight: 1.3 }}>
+                            {cert.title}
+                          </h4>
+
+                          {/* Skill Pills */}
+                          <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", marginBottom: "12px" }}>
+                            {cert.skills.map((skill) => (
+                              <span
+                                key={skill}
+                                style={{
+                                  fontSize: "0.68rem",
+                                  fontWeight: 600,
+                                  padding: "3px 9px",
+                                  borderRadius: "6px",
+                                  background: "rgba(255, 255, 255, 0.08)",
+                                  color: "#f8fafc",
+                                  border: "1px solid rgba(255, 255, 255, 0.15)",
+                                  display: "inline-flex",
+                                  alignItems: "center",
+                                  gap: "4px"
+                                }}
+                              >
+                                <span style={{ width: "4px", height: "4px", borderRadius: "50%", background: cert.color }} />
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "8px", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+                          <span style={{ fontSize: "0.7rem", color: "var(--slate-400)" }}>{cert.issuer}</span>
+                          <a
+                            href={cert.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              fontSize: "0.75rem",
+                              color: cert.color,
+                              fontWeight: 600,
+                              textDecoration: "none",
+                              display: "inline-flex",
+                              alignItems: "center",
+                              gap: "3px"
+                            }}
+                          >
+                            View Certificate ↗
+                          </a>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                 ))}

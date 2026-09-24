@@ -568,6 +568,53 @@ footer {
   overscroll-behavior-y: contain;
 }
 
+/* ─────────────────────────────────────────
+   3D CERTIFICATE FLIP CARDS
+─────────────────────────────────────────── */
+.flip-card-wrapper {
+  perspective: 1000px;
+  width: 100%;
+  min-height: 220px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card-wrapper:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.flip-card-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 
 
 /* -------------------------------------------------------------
@@ -1027,6 +1074,80 @@ div[class*="glow-"] {
 
 .animate-fadeOut {
   animation: fadeOutLabel 2s forwards ease-out;
+}
+
+/* ── CERTIFICATES TAB ── */
+.glow-certificates {
+  --glow-color-1: rgba(6, 182, 212, 0.25);
+  --glow-color-2: rgba(14, 165, 233, 0.15);
+  --glow-core-1: rgba(6, 182, 212, 0.4);
+  --glow-core-2: rgba(56, 189, 248, 0.2);
+  --glow-core-3: rgba(6, 182, 212, 0.1);
+  --primary: #06b6d4;
+  --secondary: #0ea5e9;
+  --primary-glow: rgba(6, 182, 212, 0.2);
+  --secondary-glow: rgba(14, 165, 233, 0.2);
+  --background: #020c14;
+  --foreground: #ffffff;
+  --slate-400: #cbd5e1;
+  --slate-800: #e2e8f0;
+  --slate-900: #f8fafc;
+  --border-color: rgba(6, 182, 212, 0.3);
+  --glass-bg: rgba(8, 30, 48, 0.85);
+  --glass-border: rgba(6, 182, 212, 0.25);
+}
+
+/* ══════════════════════════════════════════════
+   3D FLIP CARD SYSTEM
+   Hover on .flip-card-wrapper → inner rotates 180°
+   Front face hides, back face reveals.
+══════════════════════════════════════════════ */
+
+/* 1. Perspective container — must NOT be the rotating element */
+.flip-card-wrapper {
+  perspective: 1000px;
+  height: 230px;
+  cursor: pointer;
+}
+
+/* 2. The rotating element */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+  border-radius: 16px;
+}
+
+/* 3. Trigger the flip */
+.flip-card-wrapper:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* 4. Shared face rules */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* 5. Back face starts rotated 180° so it's invisible until hover */
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* 6. Subtle shimmer on hover for premium feel */
+.flip-card-wrapper:hover .flip-card-front,
+.flip-card-wrapper:hover .flip-card-back {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 
