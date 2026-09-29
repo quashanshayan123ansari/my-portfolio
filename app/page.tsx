@@ -231,22 +231,22 @@ export default function Home() {
           {/* Handwriting Intro Card */}
           <div style={{ maxWidth: 860 }}>
             {/* Terminal Block */}
-            <div className="fh-code-block" style={{ background: "linear-gradient(135deg, #1a162b 0%, #0f172a 100%)", border: "1px solid rgba(147, 158, 235, 0.25)", boxShadow: "0 12px 36px -6px rgba(15, 23, 42, 0.35)" }}>
-              <div className="fh-code-header" style={{ background: "rgba(255, 255, 255, 0.04)", borderBottom: "1px solid rgba(255, 255, 255, 0.08)" }}>
-                <span style={{ color: "#c084fc", fontWeight: 500, fontFamily: "var(--font-geist-mono)" }}>quashan@root ~</span>
+            <div className="fh-code-block" style={{ background: "linear-gradient(135deg, #fffdf7 0%, #fef9e7 100%)", border: "1.5px solid rgba(217, 119, 6, 0.22)", boxShadow: "0 10px 30px -5px rgba(217, 119, 6, 0.12), 0 4px 12px rgba(0, 0, 0, 0.05)" }}>
+              <div className="fh-code-header" style={{ background: "rgba(0, 0, 0, 0.03)", borderBottom: "1px solid rgba(0, 0, 0, 0.06)" }}>
+                <span style={{ color: "#92400e", fontWeight: 600, fontFamily: "'Lucida Handwriting', 'Caveat', 'Dancing Script', 'Apple Chancery', cursive" }}>mqansari ~</span>
                 <div style={{ display: "flex", gap: 6 }}>
                   <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#ff5f56", display: "inline-block" }} />
                   <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#ffbd2e", display: "inline-block" }} />
                   <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#27c93f", display: "inline-block" }} />
                 </div>
               </div>
-              <div className="fh-code-body" style={{ fontFamily: "'Lucida Handwriting', 'Caveat', 'Dancing Script', 'Apple Chancery', cursive", fontSize: "clamp(0.92rem, 1.8vw, 1.15rem)", lineHeight: 1.75, letterSpacing: "0.01em", color: "#f8fafc", padding: "22px 26px" }}>
+              <div className="fh-code-body" style={{ fontFamily: "'Lucida Handwriting', 'Caveat', 'Dancing Script', 'Apple Chancery', cursive", fontSize: "clamp(0.92rem, 1.8vw, 1.15rem)", lineHeight: 1.75, letterSpacing: "0.01em", color: "#1c1917", padding: "22px 26px" }}>
                 {(activeCursor === "terminal" || terminalText || activeCursor === "none") && (
                   <>
-                    <span className="fh-code-kw" style={{ color: "#38bdf8", fontWeight: 600, fontFamily: "var(--font-geist-mono)", fontSize: "0.85em" }}>quashan@root:~$&nbsp;</span>
-                    <span style={{ color: "#f8fafc" }}>
+                    <span className="fh-code-kw" style={{ color: "#b45309", fontWeight: 700, fontFamily: "'Lucida Handwriting', 'Caveat', 'Dancing Script', 'Apple Chancery', cursive", fontSize: "0.95em" }}>mqansari:~$&nbsp;</span>
+                    <span style={{ color: "#1c1917" }}>
                       {terminalText}
-                      {(activeCursor === "terminal" || activeCursor === "none") && <span className="terminal-cursor">█</span>}
+                      {(activeCursor === "terminal" || activeCursor === "none") && <span className="terminal-cursor" style={{ color: "#d97706" }}>█</span>}
                     </span>
                   </>
                 )}
