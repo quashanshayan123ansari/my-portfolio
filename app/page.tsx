@@ -18,7 +18,6 @@ export default function Home() {
   const [line2, setLine2] = useState("");
   const [terminalText, setTerminalText] = useState("");
   const [activeCursor, setActiveCursor] = useState<"line1" | "line2" | "terminal" | "none">("line1");
-  const [selectedFont, setSelectedFont] = useState<"fira" | "jetbrains" | "space" | "outfit">("fira");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
@@ -74,16 +73,6 @@ export default function Home() {
   const scrollToHub = () => {
     const hubSection = document.getElementById("hub");
     if (hubSection) hubSection.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const getFontFamily = () => {
-    switch (selectedFont) {
-      case "fira":      return "'Fira Code', monospace";
-      case "jetbrains": return "'JetBrains Mono', monospace";
-      case "space":     return "'Space Grotesk', sans-serif";
-      case "outfit":    return "'Outfit', sans-serif";
-      default:          return "'Fira Code', monospace";
-    }
   };
 
   const PROJECTS = [
@@ -239,42 +228,23 @@ export default function Home() {
             </div>
           </h1>
 
-          {/* Font Selector + Terminal */}
+          {/* Handwriting Intro Card */}
           <div style={{ maxWidth: 860 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6, fontSize: "0.72rem", color: "var(--color-graphite)", fontFamily: "var(--font-geist-mono)", flexWrap: "wrap" }}>
-              <span style={{ fontWeight: 600 }}>FONT:</span>
-              {([
-                { id: "fira",      label: "Fira Code" },
-                { id: "jetbrains", label: "JetBrains Mono" },
-                { id: "space",     label: "Space Grotesk" },
-                { id: "outfit",    label: "Outfit" }
-              ] as const).map((f) => (
-                <button
-                  key={f.id}
-                  onClick={() => setSelectedFont(f.id)}
-                  className={selectedFont === f.id ? "fh-tag fh-tag-dark" : "fh-tag fh-tag-outline"}
-                  style={{ fontFamily: f.id === "fira" ? "'Fira Code',monospace" : f.id === "jetbrains" ? "'JetBrains Mono',monospace" : f.id === "space" ? "'Space Grotesk',sans-serif" : "'Outfit',sans-serif", cursor: "pointer", border: "none" }}
-                >
-                  {f.label}
-                </button>
-              ))}
-            </div>
-
             {/* Terminal Block */}
-            <div className="fh-code-block" style={{ background: "#0d0d0d" }}>
-              <div className="fh-code-header">
-                <span>quashan@root ~</span>
+            <div className="fh-code-block" style={{ background: "linear-gradient(135deg, #1a162b 0%, #0f172a 100%)", border: "1px solid rgba(147, 158, 235, 0.25)", boxShadow: "0 12px 36px -6px rgba(15, 23, 42, 0.35)" }}>
+              <div className="fh-code-header" style={{ background: "rgba(255, 255, 255, 0.04)", borderBottom: "1px solid rgba(255, 255, 255, 0.08)" }}>
+                <span style={{ color: "#c084fc", fontWeight: 500, fontFamily: "var(--font-geist-mono)" }}>quashan@root ~</span>
                 <div style={{ display: "flex", gap: 6 }}>
                   <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#ff5f56", display: "inline-block" }} />
                   <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#ffbd2e", display: "inline-block" }} />
                   <span style={{ width: 10, height: 10, borderRadius: "50%", background: "#27c93f", display: "inline-block" }} />
                 </div>
               </div>
-              <div className="fh-code-body" style={{ fontFamily: getFontFamily(), fontSize: "clamp(0.78rem, 1.6vw, 1rem)", minHeight: "2.8em" }}>
+              <div className="fh-code-body" style={{ fontFamily: "'Lucida Handwriting', 'Caveat', 'Dancing Script', 'Apple Chancery', cursive", fontSize: "clamp(0.92rem, 1.8vw, 1.15rem)", lineHeight: 1.75, letterSpacing: "0.01em", color: "#f8fafc", padding: "22px 26px" }}>
                 {(activeCursor === "terminal" || terminalText || activeCursor === "none") && (
                   <>
-                    <span className="fh-code-kw">quashan@root:~$&nbsp;</span>
-                    <span style={{ color: "#e2e8f0" }}>
+                    <span className="fh-code-kw" style={{ color: "#38bdf8", fontWeight: 600, fontFamily: "var(--font-geist-mono)", fontSize: "0.85em" }}>quashan@root:~$&nbsp;</span>
+                    <span style={{ color: "#f8fafc" }}>
                       {terminalText}
                       {(activeCursor === "terminal" || activeCursor === "none") && <span className="terminal-cursor">█</span>}
                     </span>
