@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import ThreeBackground from "./components/ThreeBackground";
 import NeuralNetworkChord from "./components/NeuralNetworkChord";
@@ -19,6 +19,24 @@ export default function Home() {
   const [terminalText, setTerminalText] = useState("");
   const [activeCursor, setActiveCursor] = useState<"line1" | "line2" | "terminal" | "none">("line1");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const skillsSectionRef = useRef<HTMLElement>(null);
+
+  /* ── Scroll-triggered 3D reveal for Skills section ── */
+  useEffect(() => {
+    const el = skillsSectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("skills-visible");
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.15 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const text1 = "Hello everyone!";
@@ -359,15 +377,19 @@ export default function Home() {
       {/* ══════════════════════════════════════════
           SKILLS BAND — Light Canvas (Tinted Cards)
       ══════════════════════════════════════════ */}
-      <section className="fh-band fh-band-light">
+      <section className="fh-band fh-band-light skills-3d-section" ref={skillsSectionRef}>
         <div className="fh-band-inner">
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
+          <div className="skills-3d-header" style={{ textAlign: "center", marginBottom: 48 }}>
             <p className="fh-eyebrow" style={{ marginBottom: 10 }}>Core Competencies</p>
             <h2 className="fh-heading">Skills &amp; Expertise</h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
-            {SKILLS_CARDS.map((s) => (
-              <div key={s.title} className={`fh-card ${s.cardClass}`} style={{ cursor: "default" }}>
+          <div className="skills-3d-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16, perspective: 1200 }}>
+            {SKILLS_CARDS.map((s, i) => (
+              <div
+                key={s.title}
+                className={`fh-card ${s.cardClass} skill-card-3d`}
+                style={{ cursor: "default", "--card-index": i } as React.CSSProperties}
+              >
                 <h3 style={{ fontFamily: "var(--font-geist)", fontWeight: 500, fontSize: 16, color: "var(--color-carbon)", marginBottom: 10 }}>{s.title}</h3>
                 <p style={{ fontFamily: "var(--font-geist)", fontSize: 13, color: "var(--color-graphite)", lineHeight: 1.65 }}>{s.desc}</p>
               </div>
