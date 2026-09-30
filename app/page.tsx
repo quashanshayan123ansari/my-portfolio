@@ -41,7 +41,7 @@ export default function Home() {
   useEffect(() => {
     const text1 = "Hello everyone!";
     const text2 = "I am Quashan";
-    const text3 = "npx shadcn@latest add @react-bits/TechText-JS-CSS";
+    const text3 = "specializing in financial mathematics and quantitative finance, developing options pricing models, simulating stochastic processes, and engineering algorithmic trading frameworks.";
 
     let i1 = 0, i2 = 0, i3 = 0;
     let timer1: ReturnType<typeof setInterval> | undefined;
