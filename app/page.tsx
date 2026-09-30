@@ -6,6 +6,7 @@ import ThreeBackground from "./components/ThreeBackground";
 import NeuralNetworkChord from "./components/NeuralNetworkChord";
 import FinanceDashboard from "./components/FinanceDashboard";
 import { CERTS } from "./certificates/page";
+import TechText from "../components/TechText";
 
 type TabType = "education" | "projects" | "certificates" | "socials" | "neural" | "finance" | "research" | "corporate";
 
@@ -235,16 +236,34 @@ export default function Home() {
           <span className="fh-eyebrow">BHU · Mathematics · Quantitative Finance</span>
 
           {/* Display Headline */}
-          <h1 className="fh-display" style={{ color: "var(--color-carbon)" }}>
-            <div style={{ minHeight: "1.1em" }}>
-              {line1}
-              {activeCursor === "line1" && <span className="typing-cursor">|</span>}
+          <div style={{ width: '100%', minHeight: '200px', position: 'relative', display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1rem' }}>
+            <div style={{ width: '100%', height: '100px', position: 'relative' }}>
+              <TechText
+                text={line1 || " "}
+                fontWeight={600}
+                fontSize={72}
+                reveal="letter"
+                dashLength={4}
+                dashGap={2}
+                specks={15}
+                color="#1c1917"
+                accentColor="#1c1917"
+              />
             </div>
-            <div style={{ minHeight: "1.1em" }} className="burgundy-gradient-text">
-              {line2}
-              {activeCursor === "line2" && <span className="typing-cursor">|</span>}
+            <div style={{ width: '100%', height: '100px', position: 'relative' }}>
+              <TechText
+                text={line2 || " "}
+                fontWeight={600}
+                fontSize={72}
+                reveal="letter"
+                dashLength={4}
+                dashGap={2}
+                specks={15}
+                color="#b83d5a" /* burgundy */
+                accentColor="#4a0414"
+              />
             </div>
-          </h1>
+          </div>
 
           {/* Handwriting Intro Card */}
           <div style={{ maxWidth: 860 }}>
