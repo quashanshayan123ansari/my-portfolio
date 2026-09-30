@@ -239,7 +239,7 @@ export default function Home() {
           <div style={{ width: '100%', minHeight: '200px', position: 'relative', display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1rem' }}>
             <div style={{ width: '100%', height: '100px', position: 'relative' }}>
               <TechText
-                text={line1 || " "}
+                text="Hello everyone!"
                 fontWeight={600}
                 fontSize={72}
                 reveal="letter"
@@ -252,7 +252,7 @@ export default function Home() {
             </div>
             <div style={{ width: '100%', height: '100px', position: 'relative' }}>
               <TechText
-                text={line2 || " "}
+                text="I am Quashan"
                 fontWeight={600}
                 fontSize={72}
                 reveal="letter"
