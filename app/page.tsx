@@ -41,7 +41,7 @@ export default function Home() {
   useEffect(() => {
     const text1 = "Hello everyone!";
     const text2 = "I am Quashan";
-    const text3 = "specializing in financial mathematics and quantitative finance, developing options pricing models, simulating stochastic processes, and engineering algorithmic trading frameworks.";
+    const text3 = "npx shadcn@latest add @react-bits/TechText-JS-CSS";
 
     let i1 = 0, i2 = 0, i3 = 0;
     let timer1: ReturnType<typeof setInterval> | undefined;
@@ -240,7 +240,7 @@ export default function Home() {
               {line1}
               {activeCursor === "line1" && <span className="typing-cursor">|</span>}
             </div>
-            <div style={{ minHeight: "1.1em" }} className="dynamic-gradient-text">
+            <div style={{ minHeight: "1.1em" }} className="burgundy-gradient-text">
               {line2}
               {activeCursor === "line2" && <span className="typing-cursor">|</span>}
             </div>

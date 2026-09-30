@@ -1085,6 +1085,13 @@ div[class*="glow-"] {
   background-clip: text;
 }
 
+.burgundy-gradient-text {
+  background: linear-gradient(to right, #d23d5d 0%, #4a0414 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Responsive buttons padding and font sizes for laptop displays */
 @media (max-width: 1200px) {
   .btn-xai-white, .btn-xai-outline, .btn-xai-green {
